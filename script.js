@@ -21,9 +21,9 @@ var image = document.getElementById('myImage');
 
 // 添加点击事件监听器
 image.addEventListener('click', function() {
-  if (image.src.match('img/Jay2.jpg')) {
-    image.src = 'img/Jay.jpg';
+  if (image.src.match('Jay2.jpg')) {
+    image.src = 'Jay.jpg';
   } else {
-    image.src = 'img/Jay2.jpg';
+    image.src = 'Jay2.jpg';
   }
 });
