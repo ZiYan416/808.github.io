@@ -43,7 +43,39 @@
 				<div class="home-img">
 					<img id="myImage" src="img/Jay2.jpg" alt="" />
 				</div>
-				
+				<div class="player">
+					<!-- 音乐信息 -->
+					<section class="info">
+						<!-- 进度条 -->
+						<div class="progress">
+							<div id="start">0:00</div>
+							<div id="bar"></div>
+							<div id="end">3:15</div>
+						</div>
+						
+						<!-- 歌曲信息 -->
+						<div class="song-detail">
+							<span id="title"></span>
+							<span id="author"></span>
+						</div>
+						
+						<!-- 按钮选区 -->
+						<div id="controls" class="controls">
+							<div class="play">
+								<span><i class="iconfont icon-voice"></i></span>
+								<span><i class="iconfont icon-last"></i></span>
+								<span><i class="iconfont icon-pause"></i></span>
+								<span><i class="iconfont icon-play"></i></span>
+								<span><i class="iconfont icon-next"></i></span>
+							</div>
+						</div>
+					</section>
+					
+					<!-- audio标签 -->
+					<section class="audio">
+						<audio id="audio"  src=""></audio>
+					</section>
+				</div>
 			</div>
 			
 		</section>
