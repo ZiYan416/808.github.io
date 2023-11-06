@@ -98,6 +98,10 @@ body{
 	animation-delay: 0.7s;
 }
 
+.home-player{
+	max-width: 400px;
+}
+
 .home-img img{
 	max-width: 400px;
 	border-radius: 50%;
@@ -160,6 +164,21 @@ body{
 	color: #FFDEAD;
 	border: 2px solid #FFDEAD;
 }
+
+
+.player{
+	width: 380px;
+	height: 80px;
+	background: #FFDEAD;
+	position: ;
+	overflow: hidden;
+	border-radius: 40px;
+	text-decoration: none;
+	box-shadow: 0 0 20px #FFDEAD;
+}
+
+
+
 
 /* 动画 */
 

@@ -15,3 +15,15 @@ var typed = new Typed(".multiple-text", {
     backDelay: 1000,
     loop: true
 })
+
+// 获取图片元素
+var image = document.getElementById('myImage');
+
+// 添加点击事件监听器
+image.addEventListener('click', function() {
+  if (image.src.match('img/Jay2.jpg')) {
+    image.src = 'img/Jay.jpg';
+  } else {
+    image.src = 'img/Jay2.jpg';
+  }
+});
