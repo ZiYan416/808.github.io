@@ -115,12 +115,12 @@ body{
 .player{
 	width: 400px;
 	height: 80px;
-	background: #c90e15;
+	background: #FFDEAD;
 	position: relative;
 	overflow: hidden;
 	border-radius: 40px;
 	text-decoration: none;
-	box-shadow: 0 0 20px #FFDEAD;
+	box-shadow: 0 0 30px #FFDEAD;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -195,9 +195,9 @@ body{
 	width: 40px;
 	height: 40px;
 	background: transparent;
-	border: 2px solid #FFDEAD;
+	border: 2px solid #A52A2A;
 	border-radius: 50%;
-	color: #FFDEAD;
+	color: #A52A2A;
 	font-size: 20px;
 	text-decoration: none;
 	transition: 0.5s ease;
@@ -212,9 +212,9 @@ body{
 }
 
 .info .controls a:hover{
-	background: #FFDEAD;
-	color: #A52A2A;
-	box-shadow: 0 0 20px #FFDEAD;
+	background: #A52A2A;
+	color: #FFDEAD;
+	box-shadow: 0 0 30px #A52A2A;
 }
 
 
