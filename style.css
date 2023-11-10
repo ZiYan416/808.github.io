@@ -198,12 +198,17 @@ body{
 	border: 2px solid #FFDEAD;
 	border-radius: 50%;
 	color: #FFDEAD;
-	font-size: 40px;
+	font-size: 20px;
 	text-decoration: none;
 	transition: 0.5s ease;
 	opacity: 0;
 	animation: slideLeft 1s ease forwards;
 	animation-delay: calc(0.2s * var(--i));
+}
+
+
+.info .controls .play a{
+	font-size: 28px;
 }
 
 .info .controls a:hover{
