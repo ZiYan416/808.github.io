@@ -110,6 +110,7 @@ body{
 	opacity: 0;
 	animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
 	animation-delay: 2s,3s;
+	user-select: none;
 }
 
 .player{
@@ -122,6 +123,9 @@ body{
 	text-decoration: none;
 	box-shadow: 0 0 30px #FFDEAD;
 	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	animation: zoomIn 1s ease forwards;
+	animation-delay: 2s,3s;
 }
 
 .player .info{
@@ -147,6 +151,7 @@ body{
 
 .info .progress #start,
 .info .progress #end{
+	color: #1f242d;
 	margin: 0 14px;
 }
 
@@ -165,8 +170,9 @@ body{
 }
 
 .info .song-detail span{
+	color: #1f242d;
 	margin: 4px 0;
-	height: 7px;
+	height: 12px;
 	user-select: none;
 }
 
@@ -181,11 +187,17 @@ body{
 }
 
 .info .controls{
-	margin-top: 45px;
+	margin-top: 35px;
 	padding: 0 40px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.info .controls .play{
+	margin: 0 16px;
+	user-select: none;
+	
 }
 
 .info .controls a{
@@ -208,6 +220,7 @@ body{
 
 
 .info .controls .play a{
+	margin: 0 2px;
 	font-size: 28px;
 }
 
@@ -217,6 +230,16 @@ body{
 	box-shadow: 0 0 30px #A52A2A;
 }
 
+.audio{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.social-media{
+	user-select: none;
+}
 
 .social-media a{
 	display: inline-flex;
