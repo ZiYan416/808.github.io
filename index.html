@@ -4,30 +4,34 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 页面移动设备适配 -->
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" /> <!-- 引入 Boxicons 图标库的 CSS 文件 -->
+		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+		<!-- 引入 Boxicons 图标库的 CSS 文件 -->
 		<title>808的个人主页</title>
 	</head>
 	<body>
 		<header class="header">
 			<a href="#" class="logo">808.</a>
-			<nav class="navbar">       <!-- 导航栏 -->
+			<nav class="navbar"> <!-- 导航栏 -->
 				<a href="#" class="active item" style="--i: 1">Home</a>
 				<a href="#" class="item" style="--i: 2">About</a>
 				<a href="#" class="item" style="--i: 3">Skills</a>
-				<a href="#" class="item" style="--i: 4">Portfolio</a>
+				<a href="#" class="item" style="--i: 4">Notes</a>
 				<a href="#" class="item" style="--i: 5">Contact</a>
 			</nav>
 		</header>
-		
+
 		<section class="home">
 			<div class="home-content">
 				<h3>Hello,It's Me</h3>
 				<h1>808</h1>
-				<h3>And I'm a <span class="multiple-text"></span></h3>
+				<h3>Here to do: <span class="multiple-text"></span></h3>
 				<p>
-					Ne marche pas derrière moi, car je ne peux pas te montrer le chemin ; 
-					Ne me précède pas, car je ne peux pas te suivre ; 
-					S’il vous plaît, marchez à mes côtés et soyez mon ami.
+					Ne marche pas derrière moi, car je ne peux pas te montrer le chemin ; <br />
+					不要跟在我后面，因为我不能给你指路; <br />
+					Ne me précède pas, car je ne peux pas te suivre ; <br />
+					不要走在我前面，因为我不能跟随你;<br />
+					S’il vous plaît, marchez à mes côtés et soyez mon ami. <br />
+					请走在我身边，做我的朋友。<br />
 				</p>
 				<div class="social-media">
 					<a href="#" style="--i: 7"><i class="bx bxl-tiktok"></i></a>
@@ -37,7 +41,7 @@
 				</div>
 				<a href="#" class="btn">Download CV</a>
 			</div>
-			
+
 			<div class="home-player">
 				<div class="home-img">
 					<img id="myImage" src="Jay2.jpg" alt="" />
@@ -48,35 +52,33 @@
 						<!-- 进度条 -->
 						<div class="progress">
 							<div id="start">0:00</div>
-							<div id="bar"></div>
+							<div id="bar">
+								<div id="overlay"></div>
+							</div>
 							<div id="end">3:15</div>
 						</div>
-						
+
 						<!-- 歌曲信息 -->
 						<div class="song-detail">
-							<span id="title">Title</span>
-							<span id="author">Author</span>
+							<span id="title"></span>
+							<span id="author"></span>
 						</div>
-						
+
 						<!-- 按钮选区 -->
 						<div id="controls" class="controls">
-							<a id="volume" href="#" style="--i: 11"><i class="bx bx-volume-full""></i></a>
-							<div class="play">
-								<a id="previous" href="#" style="--i: 12"><i class="bx bx-skip-previous"></i></a>
-								<a id="play" style="--i: 13"><i class="bx bx-play"></i></a>
-								<a id="next" href="#" style="--i: 14"><i class="bx bx-skip-next"></i></a>
-							</div>
-							<a id="list" href="#" style="--i: 15"><i class="bx bxs-playlist"></i></a>
+							<span><i id="volume" class="bx bx-volume-full""></i></span>
+							<div class=" play">
+									<span><i id="previous" class="bx bx-skip-previous"></i></span>
+									<span><i id="play" class="bx bx-play"></i></span>
+									<span><i id="next" class="bx bx-skip-next"></i></span>
 						</div>
-					</section>
-					
-					<!-- audio标签 -->
-					<section class="audio">
-						<audio id="audio"  src=""></audio>
-					</section>
+						<span><i id="list" class="bx bxs-playlist"></i></span>
 				</div>
-			</div>
-			
+		</section>
+
+		<!-- audio标签 -->
+		<section class="audio">
+			<audio id="audio" src=""></audio>
 		</section>
 	</body>
 	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>

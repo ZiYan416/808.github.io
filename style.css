@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); /*字体库：Poppins字体*/
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*字体库：Poppins字体*/
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: "Poppins" ,sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
 	background: #A52A2A;
 	color: #fff;
 }
 
-.header{
+.header {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -24,7 +26,7 @@ body{
 	z-index: 100;
 }
 
-.logo{
+.logo {
 	font-size: 25px;
 	color: #fff;
 	text-decoration: none;
@@ -34,12 +36,12 @@ body{
 	animation: slideRight 1s ease forwards;
 }
 
-.navbar a{
+.navbar a {
 	display: inline-block;
 	font-size: 18px;
 	color: #fff;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 700;
 	margin-left: 35px;
 	opacity: 0;
 	transition: 0.3s;
@@ -48,11 +50,11 @@ body{
 }
 
 .navbar a:hover,
-.navbar a.active{
+.navbar a.active {
 	color: #FFDEAD;
 }
 
-.home{
+.home {
 	position: relative;
 	width: 100%;
 	height: 100vh;
@@ -62,11 +64,11 @@ body{
 	padding: 70px 10% 0;
 }
 
-.home-content{
+.home-content {
 	max-width: 600px;
 }
 
-.home-content h3{
+.home-content h3 {
 	font-size: 32px;
 	font-weight: 700;
 	opacity: 0;
@@ -74,15 +76,15 @@ body{
 	animation-delay: .7s;
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2) {
 	margin-bottom: 30px;
 }
 
-.home-content h3 span{
+.home-content h3 span {
 	color: #FFDEAD;
 }
 
-.home-content h1{
+.home-content h1 {
 	font-size: 56px;
 	font-weight: 700;
 	margin: -3px 0;
@@ -91,29 +93,29 @@ body{
 	animation-delay: 1s;
 }
 
-.home-content p{
+.home-content p {
 	font-size: 16px;
 	opacity: 0;
 	animation: slideLeft 1s ease forwards;
 	animation-delay: 0.7s;
 }
 
-.home-player{
+.home-player {
 	width: 500px;
 }
 
-.home-img img{
+.home-img img {
 	max-width: 400px;
 	border-radius: 50%;
 	margin-right: -20px;
 	box-shadow: 0 0 20px #FFDEAD;
 	opacity: 0;
 	animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-	animation-delay: 2s,3s;
+	animation-delay: 2s, 3s;
 	user-select: none;
 }
 
-.player{
+.player {
 	width: 400px;
 	height: 80px;
 	background: #FFDEAD;
@@ -125,10 +127,10 @@ body{
 	transition: all 0.5s ease-in-out;
 	opacity: 0;
 	animation: zoomIn 1s ease forwards;
-	animation-delay: 2s,3s;
+	animation-delay: 2s, 3s;
 }
 
-.player .info{
+.player .info {
 	width: 100%;
 	height: 90px;
 	position: absolute;
@@ -137,11 +139,11 @@ body{
 	transition: all .5s ease-in-out;
 }
 
-.player:hover .info{
+.player:hover .info {
 	transform: translateY(-45px);
 }
 
-.info .progress{
+.info .progress {
 	height: 0px;
 	display: flex;
 	justify-content: center;
@@ -150,43 +152,55 @@ body{
 }
 
 .info .progress #start,
-.info .progress #end{
+.info .progress #end {
 	color: #1f242d;
-	margin: 0 14px;
+	margin: 0 144px;
+	margin-left: 132px;
 }
 
-.info .progress #bar{
+.info .progress #bar {
+	position: fixed;
+	display: flex;
+	justify-content: flex-start;
 	width: 260px;
 	height: 8px;
 	border-radius: 4px;
 	background-color: rgb(234, 236, 238);
 }
 
-.info .song-detail{
+.info .progress #overlay {
+	width: 0px;
+	height: 8px;
+	border-radius: 4px;
+	background-color: #FF3030;
+	box-shadow: 0 0 30px #FF3030;
+}
+
+.info .song-detail {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-.info .song-detail span{
+.info .song-detail span {
 	color: #1f242d;
 	margin: 4px 0;
 	height: 12px;
 	user-select: none;
 }
 
-.info .song-detail #title{
+.info .song-detail #title {
 	font-size: 16px;
 	font-weight: 900;
 	letter-spacing: 2px;
 }
 
-.info .song-detail #author{
+.info .song-detail #author {
 	letter-spacing: 1px;
 }
 
-.info .controls{
+.info .controls {
 	margin-top: 35px;
 	padding: 0 40px;
 	display: flex;
@@ -194,13 +208,13 @@ body{
 	align-items: center;
 }
 
-.info .controls .play{
+.info .controls .play {
 	margin: 0 16px;
 	user-select: none;
-	
+
 }
 
-.info .controls a{
+.info .controls span {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -219,29 +233,22 @@ body{
 }
 
 
-.info .controls .play a{
+.info .controls .play span {
 	margin: 0 2px;
 	font-size: 28px;
 }
 
-.info .controls a:hover{
+.info .controls span:hover {
 	background: #A52A2A;
 	color: #FFDEAD;
 	box-shadow: 0 0 30px #A52A2A;
 }
 
-.audio{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-.social-media{
+.social-media {
 	user-select: none;
 }
 
-.social-media a{
+.social-media a {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -260,13 +267,13 @@ body{
 	animation-delay: calc(0.2s * var(--i));
 }
 
-.social-media a:hover{
+.social-media a:hover {
 	background: #FFDEAD;
 	color: #A52A2A;
 	box-shadow: 0 0 20px #FFDEAD;
 }
 
-.btn{
+.btn {
 	display: inline-block;
 	padding: 12px 28px;
 	background: #FFDEAD;
@@ -283,18 +290,15 @@ body{
 	animation-delay: 2s;
 }
 
-.btn:hover{
+.btn:hover {
 	box-shadow: 0 0 20px #FFDEAD;
 }
 
-
-.btn.active{
+.btn.active {
 	background: none;
 	color: #FFDEAD;
 	border: 2px solid #FFDEAD;
 }
-
-
 
 /* 动画 */
 
@@ -302,7 +306,7 @@ body{
 	0% {
 		transform: translateX(-100px);
 	}
-	
+
 	100% {
 		transform: translateX(0px);
 		opacity: 1;
@@ -313,7 +317,7 @@ body{
 	0% {
 		transform: translateX(100px);
 	}
-	
+
 	100% {
 		transform: translateX(0px);
 		opacity: 1;
@@ -324,7 +328,7 @@ body{
 	0% {
 		transform: translateY(100px);
 	}
-	
+
 	100% {
 		transform: translateY(0px);
 		opacity: 1;
@@ -335,7 +339,7 @@ body{
 	0% {
 		transform: translateY(-100px);
 	}
-	
+
 	100% {
 		transform: translateY(0px);
 		opacity: 1;
@@ -346,7 +350,7 @@ body{
 	0% {
 		transform: scale(0);
 	}
-	
+
 	100% {
 		transform: scale(1);
 		opacity: 1;
@@ -357,11 +361,11 @@ body{
 	0% {
 		transform: translateY(0);
 	}
-	
+
 	50% {
 		transform: translateY(-24px);
 	}
-	
+
 	100% {
 		transform: translateY(0);
 	}
