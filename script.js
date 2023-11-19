@@ -9,7 +9,7 @@ for (let i = 0; i < navbarItem.length; i++) {
 }
 
 var typed = new Typed(".multiple-text", {
-	strings: ['Music playing?', 'Note Organizing?', 'Web collection?'],
+	strings: ['Music', 'Notes', 'Webs'],
 	typeSpeed: 100,
 	backSpeed: 100,
 	backDelay: 1000,
@@ -37,28 +37,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 	// 歌曲信息数组
 	const playlist = [{
-			id: 'xxx-01',
+			id: '0',
 			title: '简单爱',
 			author: '周杰伦',
 			path: 'music/简单爱.mp3',
 			time: "4:31"
 		},
 		{
-			id: 'xxx-02',
+			id: '1',
 			title: '爱在西元前',
 			author: '周杰伦',
 			path: 'music/爱在西元前.mp3',
 			time: "3:54"
 		},
 		{
-			id: 'xxx-03',
+			id: '2',
 			title: '安静',
 			author: '周杰伦',
 			path: 'music/安静.mp3',
 			time: "5:34"
 		},
 		{
-			id: 'xxx-04',
+			id: '3',
 			title: '对不起',
 			author: '周杰伦',
 			path: 'music/对不起.mp3',
@@ -85,6 +85,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const previousButton = document.getElementById('previous');
 	const nextButton = document.getElementById('next');
 	const listButton = document.getElementById('list');
+	const songNum = document.getElementById('num');
+	const volumeButton = document.getElementById('volume');
 
 	//播放事件
 	playButton.addEventListener('click', () => {
@@ -94,6 +96,38 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			pauseSong();
 		}
 	});
+
+	//歌曲列表功能
+	const sidebar = document.querySelector('.sidebar');
+	// 生成歌曲列表项
+	function generatePlaylistItems(playlist) {
+		// 清空列表项
+		sidebarList.innerHTML = '';
+		// 遍历歌曲列表数据
+		var num=0;
+		playlist.forEach((song) => {
+			// 创建列表项元素
+			const listItem = document.createElement('li');
+			listItem.textContent = song.title + '-' + song.author;
+			// 添加点击事件，播放对应的歌曲
+			listItem.addEventListener('click', () => {
+				currentSongIndex = song.id;
+				loadSong(currentSongIndex);
+				playSong();
+			});
+			// 将列表项添加到侧边栏列表中
+			sidebarList.appendChild(listItem);
+			num++;
+		});
+		songNum.innerHTML=num;
+	}
+	//调用函数生成歌曲列表项
+	generatePlaylistItems(playlist);
+	//播放列表按钮点击事件
+	listButton.addEventListener('click', toggleSidebar);
+	function toggleSidebar() {
+		sidebar.classList.toggle('open');
+	}
 
 	//播放完成自动播放下一首事件
 	audio.addEventListener('ended', function() {
@@ -107,6 +141,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		loadSong(currentSongIndex);
 		playSong();
 	});
+	
+	//音量按钮点击事件
+	volumeButton.addEventListener('click', toggleVolume);
+	function toggleVolume() {
+	  if (audio.volume === 0) {
+	    audio.volume = 0.7; // 设置音量为默认值
+	    volumeButton.classList.remove('bx-volume-mute'); // 移除静音图标类名
+	    volumeButton.classList.add('bx-volume-full'); // 添加音量图标类名
+	  } else {
+	    audio.volume = 0; // 静音
+	    volumeButton.classList.remove('bx-volume-full'); // 移除音量图标类名
+	    volumeButton.classList.add('bx-volume-mute'); // 添加静音图标类名
+	  }
+	}
 
 	//上一首事件
 	previousButton.addEventListener('click', () => {
