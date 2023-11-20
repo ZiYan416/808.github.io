@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*字体库：Poppins字体*/
+
+.html {
+	font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+/* 页面滚动条不显示 */
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+	background: #B22222;
+	color: #fff;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1.25rem 10%;
+	background: #B22222;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.logo {
+	font-size: 1.5625rem;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 600;
+	cursor: default;
+	opacity: 0;
+	animation: slideRight 1s ease forwards;
+}
+
+.navbar a {
+	display: inline-block;
+	font-size: 1.125rem;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 700;
+	margin-left: 2.1875rem;
+	opacity: 0;
+	transition: 0.3s;
+	animation: slideTop 1s ease forwards;
+	animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover,
+.navbar a.active {
+	color: #FFDEAD;
+}
+
+.home {
+	position: relative;
+	width: 100%;
+	height: 50rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4.375rem 10% 0;
+}
+
+.home.hide {
+	display: none;
+}
+
+.home-content {
+	max-width: 37.5rem;
+}
+
+.home-content h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	opacity: 0;
+	animation: slideTop 1s ease forwards;
+	animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+	margin-bottom: 1.875rem;
+}
+
+.home-content h3 span {
+	color: #FFDEAD;
+}
+
+.home-content h1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin: -0.1875rem 0;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 1s;
+}
+
+.home-content p {
+	font-size: 1rem;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 0.7s;
+}
+
+.home-player {
+	width: 31.25rem;
+}
+
+.home-img img {
+	max-width: 25rem;
+	border-radius: 50%;
+	margin-right: 12.5rem;
+	box-shadow: 0 0 1.25rem #FFDEAD;
+	opacity: 0;
+	animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+	animation-delay: 2s, 3s;
+	user-select: none;
+}
+
+.player {
+	width: 25rem;
+	height: 5rem;
+	background: #FFDEAD;
+	position: relative;
+	overflow: hidden;
+	border-radius: 2.5rem;
+	text-decoration: none;
+	box-shadow: 0 0 1.875rem #FFDEAD;
+	transition: all 0.5s ease-in-out;
+	opacity: 0;
+	animation: zoomIn 1s ease forwards;
+	animation-delay: 2s, 3s;
+}
+
+.player .info {
+	width: 100%;
+	height: 5.625rem;
+	position: absolute;
+	bottom: 0;
+	transform: translateY(2.1875rem);
+	transition: all .5s ease-in-out;
+}
+
+.player:hover .info {
+	transform: translateY(-2.8125rem);
+}
+
+.info .progress {
+	height: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}
+
+.info .progress #start,
+.info .progress #end {
+	color: #1f242d;
+	margin: 0 9rem;
+	margin-left: 8.25rem;
+}
+
+.info .progress #bar {
+	position: fixed;
+	display: flex;
+	justify-content: flex-start;
+	width: 16.25rem;
+	height: 0.5rem;
+	border-radius: 0.25rem;
+	background-color: rgb(234, 236, 238);
+}
+
+.info .progress #overlay {
+	width: 0rem;
+	height: 0.5rem;
+	border-radius: 0.25rem;
+	background-color: #FF3030;
+	box-shadow: 0 0 1.875rem #FF3030;
+}
+
+.info .song-detail {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.info .song-detail span {
+	color: #1f242d;
+	margin: 0.25rem 0;
+	height: 0.75rem;
+	user-select: none;
+}
+
+.info .song-detail #title {
+	font-size: 1rem;
+	font-weight: 900;
+	letter-spacing: 0.125rem;
+}
+
+.info .song-detail #author {
+	letter-spacing: 0.0625rem;
+}
+
+.info .controls {
+	margin-top: 2.1875rem;
+	padding: 0 2.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info .controls .play {
+	margin: 0 1rem;
+	user-select: none;
+
+}
+
+.info .controls span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	background: transparent;
+	border: 0.125rem solid #B22222;
+	border-radius: 50%;
+	color: #B22222;
+	font-size: 1.25rem;
+	text-decoration: none;
+	transition: 0.5s ease;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: calc(0.2s * var(--i));
+}
+
+
+.info .controls .play span {
+	margin: 0 0.125rem;
+	font-size: 1.75rem;
+}
+
+.info .controls span:hover {
+	background: #B22222;
+	color: #FFDEAD;
+	box-shadow: 0 0 1.875rem #B22222;
+}
+
+.social-media {
+	user-select: none;
+}
+
+.social-media a {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	background: transparent;
+	border: 0.125rem solid #FFDEAD;
+	border-radius: 50%;
+	color: #FFDEAD;
+	font-size: 1.25rem;
+	text-decoration: none;
+	margin: 1.5625rem 0.9375rem 1.875rem 0;
+	transition: 0.5s ease;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: calc(0.2s * var(--i));
+}
+
+.social-media a:hover {
+	background: #FFDEAD;
+	color: #B22222;
+	box-shadow: 0 0 1.25rem #FFDEAD;
+}
+
+.sidebar {
+	position: fixed;
+	top: 50%;
+	right: -18.75rem;
+	/* 初始状态隐藏，可以根据需要调整侧边栏的宽度 */
+	width: 12.5rem;
+	height: 18.75rem;
+	background: #FFDEAD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transform: translateY(-50%);
+	/* 使用transform进行垂直居中 */
+	transition: right 0.3s ease;
+	overflow-y: auto;
+	z-index: 9999;
+	/* 确保侧边栏显示在其他内容之上 */
+	border-radius: 1.25rem;
+	text-decoration: none;
+	box-shadow: 0 0 1.875rem #FFDEAD;
+}
+
+.sidebar.open {
+	right: 0;
+	/* 展开状态 */
+}
+
+.list-container {
+	height: 16.25rem;
+	width: 10rem;
+	background: #B22222;
+	display: flex;
+	flex-direction: column;
+	/* 从上到下垂直排列 */
+	border-radius: 0.9375rem;
+	box-shadow: 0 0 1.875rem #B22222;
+}
+
+.listtitle {
+	margin: 1.25rem 0 0 0.625rem;
+}
+
+.listtitle #bold {
+	font-size: 1.375rem;
+	font-weight: 900;
+}
+
+.listtitle #num {
+	font-weight: 900;
+}
+
+.list-container #sidebarList {
+	margin-top: 1.25rem;
+	width: 10rem;
+	list-style-type: none;
+	padding: 0;
+}
+
+
+.list-container ul li {
+	font-size: 0.875rem;
+	height: 2.1875rem;
+	padding: 0.625rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.list-container ul li:hover {
+	background: #FFDEAD;
+	color: #B22222;
+	box-shadow: 0 0 1.25rem #FFDEAD;
+}
+
+.about {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	align-items: center;
+	margin-top: 4.375rem;
+	padding: 4.375rem 10% 0;
+}
+
+.about.hide {
+	display: none;
+}
+
+.about-content {
+	max-width: 100rem;
+	align-items: center;
+}
+
+.about-content h1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	text-align: center;
+	opacity: 0;
+	margin-bottom: 1.25rem;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 1s;
+}
+
+.about-content h3 {
+	text-align: center;
+	font-size: 1.75rem;
+	font-weight: 700;
+	opacity: 0;
+	margin-bottom: 1.25rem;
+	animation: slideTop 1s ease forwards;
+	animation-delay: .7s;
+}
+
+.about-content p {
+	font-size: 1rem;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 0.7s;
+}
+
+.accordion {
+	width: 62.5rem;
+	height: 25rem;
+	margin: 0.625rem auto;
+	margin-top: 3.75rem;
+	box-shadow: 0 0 0.625rem 0.125rem rgba(255, 222, 173, 0.4);
+	opacity: 0;
+	animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+	animation-delay: 2s, 3s;
+	user-select: none;
+}
+
+.accordion a {
+	font-weight: 900;
+	color: #fff;
+}
+
+.accordion li {
+	width: 12.5rem;
+	height: 25rem;
+	overflow: hidden;
+	position: relative;
+	float: left;
+	border-left: 0.0625rem solid #aaa;
+	box-shadow: 0 0 1.5625rem 0.625rem rgba(255, 222, 173, 0.4);
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+.accordion ul:hover li {
+	width: 5.625rem;
+}
+
+.accordion ul li:hover {
+	width: 40rem;
+}
+
+.accordion p {
+	font-size: 1rem;
+	margin: 1.25rem 0.625rem;
+	margin-left: 13.75rem;
+}
+
+.accordion .title {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 25rem;
+	width: 12.5rem;
+	background: rgba(255, 222, 173, 0.5);
+}
+
+.accordion .title a {
+	writing-mode: tb-rl;
+	letter-spacing: 0.4375rem;
+	margin-left: 1.875rem;
+	display: block;
+	color: #fff;
+	font-size: 3.125rem;
+	font-weight: 700;
+	padding: 1.25rem;
+}
+
+.text {
+	width: 62.5rem;
+	margin-top: 1.875rem;
+	margin-left: 10.3125rem;
+}
+
+.text #header {
+	padding-top: 4.375rem;
+}
+
+.text #section {
+	padding-top: 4.375rem;
+}
+
+.text #div {
+	padding-top: 4.375rem;
+}
+
+.text #nav {
+	padding-top: 4.375rem;
+}
+
+.text #ul {
+	padding-top: 4.375rem;
+}
+
+.text #bold {
+	font-weight: 900;
+}
+
+.notes {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	margin-top: 3.125rem;
+	padding: 4.375rem 10% 0;
+}
+
+.notes.hide {
+	display: none;
+}
+
+.notetab {
+	position: fixed;
+	height: 100vh;
+	width: 25rem;
+	background: #FFDEAD;
+	border-radius: 1.25rem;
+	text-decoration: none;
+	box-shadow: 0 0 1.875rem #FFDEAD;
+	opacity: 0;
+	animation: slideTop 1s ease forwards;
+	animation-delay: 1s;
+}
+
+.notetab .tabtext {
+	margin: 1.25rem 1.25rem 1.25rem 1.25rem;
+	color: #B22222;
+	user-select: none;
+}
+
+.notetab .tabtext a {
+	color: #B22222;
+}
+
+.notetab .tabtext h1 {
+	font-size: 2.125rem;
+}
+
+.notetab .tabtext a:hover {
+	color: #FF3030;
+	text-shadow: 0 0 0.625rem #FF3030;
+}
+
+.notes-content {
+	margin-top: -8.75rem;
+	margin-left: 31.25rem;
+	width: 50rem;
+}
+
+.notes-content h1 {
+	font-size: 3.5rem;
+	font-weight: 700;
+	opacity: 0;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 1s;
+}
+
+.notes-content h2 {
+	font-size: 2.625rem;
+	font-weight: 700;
+	opacity: 0;
+	margin-bottom: 1.25rem;
+	animation: slideBottom 1s ease forwards;
+	animation-delay: .7s;
+}
+
+.notes-content h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	opacity: 0;
+	margin-bottom: 1.25rem;
+	animation: slideTop 1s ease forwards;
+	animation-delay: .7s;
+}
+
+.notes-content h4 {
+	font-size: 1.4375rem;
+	opacity: 0;
+	margin-bottom: 1.25rem;
+	animation: slideRight 1s ease forwards;
+	animation-delay: .7s;
+}
+
+.notes-content p {
+	font-size: 1rem;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 0.7s;
+}
+
+.notes-content code {
+	font-size: 1rem;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 0.7s;
+}
+
+.notes-content #blender {
+	padding-top: 4.375rem;
+}
+
+.notes-content #git {
+	padding-top: 4.375rem;
+}
+
+.notes-content #datastructure {
+	padding-top: 4.375rem;
+}
+
+.contact {
+	position: relative;
+	width: 100%;
+	height: 50rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4.375rem 10% 0;
+}
+
+.contact.hide {
+	display: none;
+}
+
+.contact-content {
+	margin-left: 12.5rem;
+	max-width: 100rem;
+	align-items: center;
+	opacity: 0;
+	animation: slideLeft 1s ease forwards;
+	animation-delay: 1s;
+}
+
+.contact-content h1 {
+	margin-bottom: 2.5rem;
+	font-size: 3.5rem;
+	font-weight: 700;
+}
+
+.contact-content p {
+	margin-top: 0.625rem;
+	font-size: 1.25rem;
+}
+
+.contact-img img {
+	max-width: 25rem;
+	border-radius: 50%;
+	margin-right: 12.5rem;
+	box-shadow: 0 0 1.25rem #FFDEAD;
+	opacity: 0;
+	animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+	animation-delay: 1s, 2s;
+	user-select: none;
+}
+
+/* 动画 */
+@keyframes slideRight {
+	0% {
+		transform: translateX(-6.25rem);
+	}
+
+	100% {
+		transform: translateX(0rem);
+		opacity: 1;
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(6.25rem);
+	}
+
+	100% {
+		transform: translateX(0rem);
+		opacity: 1;
+	}
+}
+
+@keyframes slideTop {
+	0% {
+		transform: translateY(6.25rem);
+	}
+
+	100% {
+		transform: translateY(0rem);
+		opacity: 1;
+	}
+}
+
+@keyframes slideBottom {
+	0% {
+		transform: translateY(-6.25rem);
+	}
+
+	100% {
+		transform: translateY(0rem);
+		opacity: 1;
+	}
+}
+
+@keyframes zoomIn {
+	0% {
+		transform: scale(0);
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes floatImage {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-1.5rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}

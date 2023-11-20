@@ -1,12 +1,21 @@
 let navbarItem = document.querySelectorAll('.item')
+let contentItem = document.querySelectorAll('.content')
 for (let i = 0; i < navbarItem.length; i++) {
 	navbarItem[i].addEventListener('click', function() {
 		for (let i = 0; i < navbarItem.length; i++) {
-			navbarItem[i].classList.remove('active')
+			navbarItem[i].classList.remove('active');
+		}
+		for (let j = 0; j < contentItem.length; j++) {
+			contentItem[j].classList.add('hide');
 		}
 		this.classList.add('active')
+		contentItem[i].classList.remove('hide');
 	})
 }
+for (let i = 1; i < contentItem.length; i++) {
+	contentItem[i].classList.add('hide');
+}
+
 
 var typed = new Typed(".multiple-text", {
 	strings: ['Music', 'Notes', 'Webs'],
@@ -16,22 +25,34 @@ var typed = new Typed(".multiple-text", {
 	loop: true
 })
 
+//监听页面尺寸变化，动态设置 html 下 font-size大小
+window.onresize=() =>{
+	setHtmlFontSize();
+}
+
+function setHtmlFontSize() {
+	const clientWidth= document.body.clientWidth;
+	document.querySelector('html').style.fontSize=clientWidth /100+'px'
+}
+
+setHtmlFontSize();
+
 window.addEventListener('DOMContentLoaded', (event) => {
 	// 获取图片元素
 	var image = document.getElementById('myImage');
 
 	// 添加点击事件监听器
 	image.addEventListener('click', function() {
-		if (image.src.match('Jay2.jpg')) {
+		if (image.src.match('img/Jay2.jpg')) {
 			audio.play();
 			playButton.classList.remove('bx-play');
 			playButton.classList.add('bx-pause');
-			image.src = 'Jay.jpg';
+			image.src = 'img/Jay.jpg';
 		} else {
 			audio.pause();
 			playButton.classList.remove('bx-pause');
 			playButton.classList.add('bx-play');
-			image.src = 'Jay2.jpg';
+			image.src = 'img/Jay2.jpg';
 		}
 	});
 
@@ -40,28 +61,28 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			id: '0',
 			title: '简单爱',
 			author: '周杰伦',
-			path: 'music/简单爱.mp3',
+			path: 'other/简单爱.mp3',
 			time: "4:31"
 		},
 		{
 			id: '1',
 			title: '爱在西元前',
 			author: '周杰伦',
-			path: 'music/爱在西元前.mp3',
+			path: 'other/爱在西元前.mp3',
 			time: "3:54"
 		},
 		{
 			id: '2',
 			title: '安静',
 			author: '周杰伦',
-			path: 'music/安静.mp3',
+			path: 'other/安静.mp3',
 			time: "5:34"
 		},
 		{
 			id: '3',
 			title: '对不起',
 			author: '周杰伦',
-			path: 'music/对不起.mp3',
+			path: 'other/对不起.mp3',
 			time: "3:45"
 		}
 	];
@@ -104,7 +125,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		// 清空列表项
 		sidebarList.innerHTML = '';
 		// 遍历歌曲列表数据
-		var num=0;
+		var num = 0;
 		playlist.forEach((song) => {
 			// 创建列表项元素
 			const listItem = document.createElement('li');
@@ -119,12 +140,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
 			sidebarList.appendChild(listItem);
 			num++;
 		});
-		songNum.innerHTML=num;
+		songNum.innerHTML = num;
 	}
 	//调用函数生成歌曲列表项
 	generatePlaylistItems(playlist);
 	//播放列表按钮点击事件
 	listButton.addEventListener('click', toggleSidebar);
+
 	function toggleSidebar() {
 		sidebar.classList.toggle('open');
 	}
@@ -141,19 +163,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		loadSong(currentSongIndex);
 		playSong();
 	});
-	
+
 	//音量按钮点击事件
 	volumeButton.addEventListener('click', toggleVolume);
+
 	function toggleVolume() {
-	  if (audio.volume === 0) {
-	    audio.volume = 0.7; // 设置音量为默认值
-	    volumeButton.classList.remove('bx-volume-mute'); // 移除静音图标类名
-	    volumeButton.classList.add('bx-volume-full'); // 添加音量图标类名
-	  } else {
-	    audio.volume = 0; // 静音
-	    volumeButton.classList.remove('bx-volume-full'); // 移除音量图标类名
-	    volumeButton.classList.add('bx-volume-mute'); // 添加静音图标类名
-	  }
+		if (audio.volume === 0) {
+			audio.volume = 0.7; // 设置音量为默认值
+			volumeButton.classList.remove('bx-volume-mute'); // 移除静音图标类名
+			volumeButton.classList.add('bx-volume-full'); // 添加音量图标类名
+		} else {
+			audio.volume = 0; // 静音
+			volumeButton.classList.remove('bx-volume-full'); // 移除音量图标类名
+			volumeButton.classList.add('bx-volume-mute'); // 添加静音图标类名
+		}
 	}
 
 	//上一首事件

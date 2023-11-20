@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- 页面移动设备适配 -->
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
 		<!-- 引入 Boxicons 图标库的 CSS 文件 -->
 		<title>808的个人主页</title>
@@ -14,13 +14,12 @@
 			<nav class="navbar"> <!-- 导航栏 -->
 				<a href="#" class="active item" style="--i: 1">Home</a>
 				<a href="#" class="item" style="--i: 2">About</a>
-				<a href="#" class="item" style="--i: 3">Skills</a>
-				<a href="#" class="item" style="--i: 4">Notes</a>
-				<a href="#" class="item" style="--i: 5">Contact</a>
+				<a href="#" class="item" style="--i: 3">Notes</a>
+				<a href="#" class="item" style="--i: 4">Contact</a>
 			</nav>
 		</header>
 
-		<section class="home">
+		<section class="home content">
 			<div class="home-content">
 				<h3>Hello,It's Me</h3>
 				<h1>808</h1>
@@ -35,15 +34,17 @@
 				</p>
 				<div class="social-media">
 					<a href="https://www.tiktok.com" target="_blank" style="--i: 7"><i class="bx bxl-tiktok"></i></a>
-					<a href="https://www.facebook.com" target="_blank" style="--i: 8"><i class="bx bxl-facebook-circle"></i></a>
+					<a href="https://www.facebook.com" target="_blank" style="--i: 8"><i
+							class="bx bxl-facebook-circle"></i></a>
 					<a href="https://www.google.com" target="_blank" style="--i: 9"><i class="bx bxl-google"></i></a>
-					<a href="https://github.com/ZiYan416" target="_blank" style="--i: 10"><i class="bx bxl-github"></i></a>
+					<a href="https://github.com/ZiYan416" target="_blank" style="--i: 10"><i
+							class="bx bxl-github"></i></a>
 				</div>
 			</div>
 
 			<div class="home-player">
 				<div class="home-img">
-					<img id="myImage" src="Jay2.jpg" alt="" />
+					<img id="myImage" src="img/Jay2.jpg" alt="" />
 				</div>
 				<div class="player">
 					<!-- 音乐信息 -->
@@ -92,7 +93,615 @@
 		<section class="audio">
 			<audio id="audio" src=""></audio>
 		</section>
+
+		<section class="about content">
+			<div class="about-content">
+				<h1>关于</h1>
+				<h3>这是一个简单的个人主页，提供了音乐播放器等功能<br />
+					以下是具体功能的描述：</h3>
+				<div class="present">
+					<div class="accordion">
+						<ul>
+							<li>
+								<div class="title">
+									<a>页面结构</a>
+								</div>
+								<p>
+									<a href="#header">header</a> ：页面的页眉，包含网站的logo和导航栏。<br />
+									<a href="#section">section</a> class="home content" ：主页部分的容器。<br />
+									<a href="#div">div</a> class="home-content" ：主页内容的容器，包含个人信息和社交媒体链接。<br />
+									<a href="#div">div</a> class="home-player" ：音乐播放器的容器。<br />
+									<a href="#div">div</a> class="sidebar" ：侧边栏容器，显示播放列表。<br />
+									<a href="#section">section</a> class="audio" ：音频标签的容器，用于播放音乐。<br />
+									<a href="#section">section</a> class="about content" ：关于页面的容器。<br />
+								</p>
+							</li>
+							<li>
+								<div class="title">
+									<a>导航栏</a>
+								</div>
+								<p><a href="#nav">nav</a> class="navbar" ：导航栏容器。<br />
+									包含"Home"、"About"、"Skills"、"Notes"和"Contact"五个链接，供用户导航到相应的页面。<br />
+									Home ：网页的主页，包含了音乐播放器的功能。<br />
+									About ：网页的功能实现讲解，介绍了网页的主体功能。<br />
+									Skills ：<br />
+									Notes ：<br />
+									Contact ：<br />
+								</p>
+							</li>
+							<li>
+								<div class="title">
+									<a>主页内容</a>
+								</div>
+
+								<p>Hello, It's Me ：简短的问候语。<br />
+									808 ：显示个人名称。<br />
+									Here to do: ：展示待办事项的动态效果。<br />
+									个人简介的段落，包含了一段法语和英语的句子，引用于加缪的名言。<br />
+									<a href="#div">div</a> class='social media'
+									：社交媒体链接的容器，包含了TikTok、Facebook、Google和GitHub的链接图标。<br />
+									点击对应的图标后跳转至对应的社交账户页面。
+								</p>
+
+							</li>
+							<li>
+								<div class="title">
+									<a>音乐播放器</a>
+								</div>
+
+								<p>音乐播放器包含了音乐的进度条、歌曲信息和控制按钮。<br />
+									显示音乐播放器的封面图片。<br />
+									进度条显示当前播放进度和歌曲长度，并可以根据当前播放歌曲实时更新。<br />
+									歌曲信息包括标题和作者，并可以根据当前播放歌曲实时更新。<br />
+									控制按钮包括音量控制按钮、上一首、播放/暂停、下一首和播放列表按钮。<br />
+									点击对应的功能按钮可以执行相应的操作，实现了自定义audio控件元素。</p>
+
+							</li>
+							<li>
+								<div class="title">
+									<a>侧边栏</a>
+								</div>
+
+								<p>侧边栏显示了播放列表的标题和歌曲数量。<br />
+									<a href="#ul">ul</a> id="sidebarList" ：播放列表的容器，通过JavaScript生成播放列表。<br />
+									其中当前播放列表显示的歌曲首数随着实际播放列表中音乐数量实时更新。<br />
+									播放列表是通过script代码功能自动实现的，因而会自动更新。<br />
+									点击对应的歌曲名称后会自动切歌。
+								</p>
+
+							</li>
+						</ul>
+					</div>
+					<div class="text">
+						<h3 id="header">header标签</h3>
+						<p>
+							HTML中的 <span id="bold">header</span>
+							标签用于定义文档或文档节的页眉部分。它通常包含网站或应用程序的标志、标题、导航栏和其他与页面整体相关的内容。<br />
+							以下是 <span id="bold">header</span> 标签的一些主要作用：<br />
+							1. 标识网站或应用程序： <span id="bold">header</span>
+							可以包含网站或应用程序的标志、标题和其他标识元素，帮助用户在页面上快速识别和识别所访问的网站或应用程序。<br />
+							2. 导航栏：常见的做法是将网站的主导航栏放置在 <span id="bold">header</span>
+							中，以提供对网站不同部分的导航链接。这使得导航栏在整个页面中保持一致，并提供易于访问的导航功能。<br />
+							3. 页面级别的标题或描述： <span id="bold">header</span>
+							中的文本内容可以用于呈现页面的主要标题或简短描述，使用户对页面内容有一个快速的了解。<br />
+							4. 页眉内容：除了标志、标题和导航栏之外， <span id="bold">header</span>
+							还可以包含其他与页面整体相关的内容，如联系信息、搜索框、社交媒体链接等。<br />
+							总的来说， <span id="bold">header</span>>
+							标签提供了一个容器，用于将与页面整体相关的内容组织在一起，并帮助用户快速识别和导航到页面的不同部分。它在构建语义化的HTML结构时起到了重要的作用。<br />
+						</p>
+						<h3 id="section">section标签</h3>
+						<p>
+							HTML中的 <span id="bold">section</span>
+							标签用于定义文档中的一个独立的部分或区块。它通常表示文档的逻辑或主题上的分割，可以将相关内容组织在一起。<br />
+							以下是 <span id="bold">section</span> 标签的一些主要作用：<br />
+							1. 逻辑分割： <span id="bold">section</span> 标签用于将文档内容分割成不同的逻辑部分。每个 <span
+								id="bold">section</span>
+							可以包含独立的主题、主要内容或功能模块，使得文档的结构更加清晰和有组织。<br />
+							2. 内容组织： <span id="bold">section</span> 可以用于组织相关的内容，使其在视觉上或语义上形成一个完整的区块。例如，一个新闻网站可以使用
+							section
+							将每篇新闻文章包装在一个独立的区块中。<br />
+							3. 标题和子标题： <span id="bold">section</span>
+							可以包含一个标题或子标题，用于描述该部分的内容或主题。这有助于读者快速了解该部分的主要内容。<br />
+							4. 样式和样式隔离：通过给 <span id="bold">section</span>
+							添加class或ID，可以为每个部分应用特定的样式或脚本。这样可以更好地控制和定制每个部分的外观和行为。<br />
+							5. 语义化的HTML： <span id="bold">section</span>
+							标签的使用有助于构建语义化的HTML结构，提高文档的可访问性和可理解性。它使得文档结构更加清晰，并为搜索引擎和辅助技术提供更准确的信息。<br />
+							总的来说， <span id="bold">section</span>
+							标签用于划分和组织文档内容，提供更好的结构和语义化，使得页面的逻辑更清晰，并且可以更好地控制和样式化各个独立的部分。<br />
+						</p>
+						<h3 id="div">div标签</h3>
+						<p>
+							HTML中的 <span id="bold">div</span> 标签是一个通用的容器元素，用于组合其他HTML元素或内容，并将它们作为一个整体进行样式化或操作。<br />
+							以下是 <span id="bold">div</span> 标签的一些主要作用：<br />
+							1. 分组内容： <span id="bold">div</span>
+							标签可以用于将相关的HTML元素或内容组合在一起，并将它们作为一个逻辑组进行处理。它提供了一种分组元素的方式，使得可以将一组相关的元素包装在一个容器中。<br />
+							2. 样式化和布局： <span id="bold">div</span> 标签是CSS样式化和布局的主要工具之一。通过为 <span id="bold">div</span>
+							添加class或ID，可以为其应用特定的样式规则，控制其外观、位置和布局。<br />
+							3. JavaScript操作： <span id="bold">div</span> 标签可以用作JavaScript操作的目标容器。通过选择和操作 <span
+								id="bold">div</span>
+							元素，可以动态地添加、修改或删除其中的内容，实现与用户交互和动态页面更新相关的功能。<br />
+							4. 语义化的HTML：尽管 <span id="bold">div</span> 本身没有明确的语义，但它在构建语义化的HTML结构时起到了重要的作用。通过将相关的内容包装在 div
+							中，可以提高HTML文档的可读性和可维护性。<br />
+							5. 占位符： <span id="bold">div</span> 标签可以用作占位符，为将来的内容预留空间。在页面开发过程中，可以使用 <span
+								id="bold">div</span> 作为临时容器，以便在后续的开发阶段填充实际内容。<br />
+							总的来说， <span
+								id="bold">div</span>标签是一个通用的容器元素，用于组合和包装其他HTML元素或内容。它在样式化、布局、JavaScript操作和语义化的HTML结构方面发挥着重要作用，并提供了一种灵活的方式来组织和处理页面上的内容。<br />
+						</p>
+						<h3 id="nav">nav标签</h3>
+						<p>
+							HTML中的 <span id="bold">nav</span> 标签用于定义页面的导航部分，即网站或应用程序的主要导航菜单。<br />
+							以下是 <span id="bold">nav</span> 标签的一些主要作用：<br />
+							1. 导航菜单： <span id="bold">nav</span>
+							标签用于包含网站或应用程序的主要导航菜单。它可以包含链接或按钮，用于导航到网站的不同页面或应用程序的不同功能区域。<br />
+							2. 语义化的HTML：使用 <span id="bold">nav</span>
+							标签可以提高HTML文档的语义化。它明确地标识出包含导航的部分，使得搜索引擎和辅助技术能够更好地理解和解释导航菜单的作用。<br />
+							3. 可访问性： <span id="bold">nav</span> 标签有助于提高页面的可访问性。屏幕阅读器和辅助技术可以使用 <span id="bold">nav</span>
+							标签来识别导航菜单，并向用户提供更好的导航和定位功能。<br />
+							4. 样式化和布局：通过为 <span id="bold">nav</span>
+							标签添加class或ID，可以为导航菜单应用特定的样式规则，以实现自定义的外观和布局。这使得导航菜单的样式和风格能够与页面的其他部分进行区分。<br />
+							总的来说， <span id="bold">nav</span>
+							标签用于定义页面的导航部分，提供了一种语义化的方式来标识和组织导航菜单。它在页面的可访问性、语义化和样式化方面起到了重要的作用，帮助用户更好地导航和浏览网站或应用程序的内容。<br />
+						</p>
+						<h3 id="ul">ul标签</h3>
+						<p>
+							HTML中的 <span id="bold">ul</span> 标签用于创建无序列表（unordered
+							list）。无序列表是一种用于展示项目列表的标记方式，其中的项目没有特定的顺序或层次关系。<br />
+							以下是 <span id="bold">ul</span> 标签的一些主要作用：<br />
+							1. 创建无序列表： <span id="bold">ul</span> 标签用于创建无序列表，其中的项目会以符号（通常是圆点或实心圆）作为项目符号进行显示。<br />
+							2. 列表项： <span id="bold">ul</span> 标签中的每个列表项使用 <span id="bold">li</span> 标签进行包裹。 <span
+								id="bold">li</span> 标签定义了列表中的每个项目，可以包含文本、图像、链接或其他HTML元素。<br />
+							3. 分组相关内容：无序列表适用于将相关的项目进行分组显示。例如，在一个产品特点列表中，每个特点可以作为一个列表项进行展示。<br />
+							4. 语义化的HTML：使用 <span id="bold">ul</span>
+							标签可以提高HTML文档的语义化。它明确地标识出包含无序列表的部分，使得搜索引擎和辅助技术能够更好地理解和解释列表的结构和含义。<br />
+							5. 样式化和布局：通过为 <span id="bold">ul</span> 和 <span id="bold">li</span>
+							标签添加class或ID，可以为无序列表应用特定的样式规则，以实现自定义的外观和布局。<br />
+							总的来说， <span id="bold">ul</span>
+							标签用于创建无序列表，其中的项目没有特定的顺序或层次关系。它在组织和展示项目列表、语义化的HTML结构以及样式化和布局方面起到了重要的作用。<br />
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="notes content">
+			<div class="notetab">
+				<div class="tabtext">
+					<h1><a href="#git">Git</a></h1>
+					<p>
+						Git是一个版本控制系统，用于跟踪文件和文件夹的变化。它广泛应用于软件开发项目，可以帮助团队协同工作、管理代码变更、解决冲突并保留项目的历史记录。<br />
+						点击标题转到笔记获取详细信息。<br />
+					</p>
+					<h1><a href="#datastructure">算法数据结构</a></h1>
+					<p>
+						算法和数据结构是计算机科学中两个核心的概念，它们相互关联且在软件开发中起着重要作用。算法和数据结构之间存在密切的关系。数据结构为算法提供了操作的基础，而算法则利用数据结构来解决实际问题。优秀的算法需要选择合适的数据结构，以提高算法的效率和性能。<br />
+						理解算法和数据结构的概念对于编写高效、可维护和可扩展的软件非常重要。通过选择适当的数据结构和应用有效的算法，可以提高程序的性能，并解决各种实际问题。<br />
+						点击标题转到笔记获取详细信息。<br />
+					</p>
+					<h1><a href="#blender">Blender</a></h1>
+					<p>
+						Blender是一个开源的三维计算机图形软件，用于创建、建模、渲染和动画制作。它提供了广泛的功能和工具，适用于各种领域，包括游戏开发、电影制作、动画制作、建筑可视化等。<br />
+						点击标题转到笔记获取详细信息。<br />
+					</p>
+				</div>
+			</div>
+			<div class="notes-content">
+				<h1 id="git">Git</h1>
+				<h3>本地上传至github</h3>
+				<h4>通过git上传文件</h4>
+				<p>首先进入master文件夹下，右键打开“Git Bash Here”，弹出命令窗口，输入如下语句进行上传。</p>
+				<pre><code>
+				git init     //在此文件夹生成一个.git隐藏文件
+				git add .    //将文件添加到缓存区
+				git status   //查看现在的状态
+				git commit -m &quot;这里是注释&quot;   //提交添加到缓存区的文件
+				git remote add origin xxx@xxx/xxx.git  
+				//添加新的git方式的origin，github上创建好的仓库和本地仓库进行关联
+				git push origin master  
+				//把本地库的所有内容推送到远程仓库（github）上
+				git remote set-url origin https://xxx@xxx/B.git   
+				//设置远程url为修改后的地址
+				git remote -v    //查看remote链接
+				</code></pre>
+				<h3>更新仓库文件</h3>
+				<p>如果对本地文件有了修改，则需要对仓库文件进行更新，比如本地文件中删除了一个文件。下面将显示如何对仓库更新</p>
+				<p>首先进入你的master文件夹下，右键打开“Git Bash Here”，弹出命令窗口，输入如下内容即可更新仓库</p>
+				<pre><code>
+				git status
+				git add -A
+				git commit -a -m &quot;update&quot;   
+				//能提交修改过，但是没有添加到缓存区的文件
+				git push origin master -f
+				</code></pre>
+				<h3>删除github中的某个文件（夹）</h3>
+				<p>github上只能删除仓库，但是却无法删除文件或文件夹，所以只能通过命令来解决。</p>
+				<p>首先进入你的master文件夹下，右键打开“Git Bash Here”，弹出命令窗口，输入一下内容：</p>
+				<pre><code>
+				git pull origin master  
+				//将远程仓库里面的项目拉下来
+				dir  //有哪些文件夹
+				git rm -r --cached picture  
+				//删除picture文件夹
+				git commit -m &quot;删除了picture文件夹&quot;  
+				//提交,添加操作说明
+				git push origin master  
+				//将本次更改更新到github项目上去
+				</code></pre>
+
+				<h1 id="datastructure">算法数据结构</h1>
+				<h2>第一章 概述</h2>
+				<h3>1.1 算法复杂度</h3>
+				<h4>前言</h4>
+				<p>算法复杂度旨在计算在输入数据量 <em>N</em> 的情况下，算法的「时间使用」和「空间使用」情况；体现算法运行使用的时间和空间随「数据大小 <em>N</em> 」而增大的速度。</p>
+				<p>算法复杂度主要可从 时间 、空间 两个角度评价：</p>
+				<p><strong>时间：</strong> 假设各操作的运行时间为固定常数，统计算法运行的「计算操作的数量」 ，以代表算法运行所需时间；
+					<strong>空间：</strong> 统计在最差情况下，算法运行所需使用的「最大空间」；
+					「输入数据大小 <em>N</em> 」指算法处理的输入数据量；根据不同算法，具有不同定义，例如：
+				</p>
+				<p>排序算法： <em>N</em> 代表需要排序的元素数量；
+					搜索算法： <em>N</em> 代表搜索范围的元素总数，例如数组大小、矩阵大小、二叉树节点数、图节点和边数等；</p>
+				<h4>1.1.1 时间复杂度</h4>
+				<h5>概念定义</h5>
+				<p>根据定义，时间复杂度指输入数据大小为 <em>N</em>
+					时，算法运行所需花费的时间。需要注意：统计的是算法的「计算操作数量」，而不是「运行的绝对时间」。计算操作数量和运行绝对时间呈正相关关系，并不相等。算法运行时间受到「编程语言
+					、计算机处理器速度、运行环境」等多种因素影响。例如，同样的算法使用 Python 或 C++ 实现、使用 CPU 或 GPU 、使用本地 IDE 或力扣平台提交，运行时间都不同。
+					体现的是计算操作随数据大小 N 变化时的变化情况。假设算法运行总共需要「 1 次操作」、「 100 次操作」，此两情况的时间复杂度都为常数级<em>O</em>(1) ；需要「 <em>N</em>
+					次操作」、「 100<em>N</em> 次操作」的时间复杂度都为 <em>O</em>(<em>N</em>) 。</p>
+				<h5>符号表示</h5>
+				<p>根据输入数据的特点，时间复杂度具有「最差」、「平均」、「最佳」三种情况，分别使用 <em>O</em> , Θ , Ω 三种符号表示。以下借助一个查找算法的示例题目帮助理解。</p>
+				<ul>
+					<li><strong>最佳情况 Ω(1) ：</strong> <code>nums = [7, a, b, c, ...]</code> ，即当数组首个数字为 7 时，无论
+						<code>nums</code> 有多少元素，线性查找的循环次数都为 1 次；
+					</li>
+					<li><strong>最差情况 <em>O</em>(<em>N</em>) ：</strong><code>nums = [a, b, c, ...]</code>且
+						<code>nums</code> 中所有数字都不为 7 ，此时线性查找会遍历整个数组，循环 <em>N</em> 次；
+					</li>
+					<li><strong>平均情况 Θ ：</strong> 需要考虑输入数据的分布情况，计算所有数据情况下的平均时间复杂度；例如本题目，需要考虑数组长度、数组元素的取值范围等；</li>
+				</ul>
+
+				<h1 id="blender">Blender</h1>
+				<h2>7.1 边：细分、滑移</h2>
+				<p><strong>细分</strong> <em>Subdivide</em></p>
+				<p>选中一条边，右键，细分。</p>
+				<p><strong>滑移</strong> <em>Edge Slide</em></p>
+				<p>1 选中一条边</p>
+				<p>2 菜单，边|滑移边线</p>
+				<p>其中，滑移时，是以两侧的邻边为轨道</p>
+				<h2>7.2 边：删除、溶解</h2>
+				<p>选中一条边，按 <strong>X</strong> 键，删除边</p>
+				<p>当删除边时，所在的面亦会被删除</p>
+				<p><strong>边的溶解</strong> <em>Dissolve</em></p>
+				<p>溶解/融化 的意思，不影响整体结构</p>
+				<h2>7.3 边线倒角</h2>
+				<p><strong>边线倒角</strong> <em>Bevel</em></p>
+				<ul>
+					<li>选中一条边</li>
+					<li>倒角</li>
+					<li>微调</li>
+
+				</ul>
+				<p>小技巧：鼠标悬停在工具按钮上，按 <strong>F1</strong> ，打开在线帮助</p>
+				<p>各种边线均可以倒角：</p>
+				<p>1 内折的墙角，内90度</p>
+				<p>2 平面内边线，平180度</p>
+				<p>3 也可以选中一个面，进行倒角</p>
+				<h2>7.4 环切</h2>
+				<p><strong>环切</strong> <em>Loop Cut</em>，一个常用操作</p>
+				<p>快捷键 <strong>CTRL + R</strong> </p>
+				<p>1 预览切线</p>
+				<p>2 <strong>LMB</strong> ，按下确认（别松开）</p>
+				<p>3 继续按住 <strong>LMB</strong> ，滑移，调整位置</p>
+				<p>4 参数微调：</p>
+				<ul>
+					<li>切割次数</li>
+					<li>钳制，收左右边线的制约</li>
+
+				</ul>
+				<h2>7.5 循环边、并排边</h2>
+				<p><strong>循环边</strong> <em>Loop Edges</em></p>
+				<ul>
+					<li>菜单 选择|选择循环|循环边</li>
+					<li><strong>ALT + LMB</strong></li>
+					<li><strong>SHIFT + ALT + LMB</strong> ，多选</li>
+
+				</ul>
+				<p><strong>并排边</strong> <em>Ring Edges</em> 并排面</p>
+				<ul>
+					<li>菜单 选择|选择循环|并排边</li>
+					<li><strong>CTRL + ALT + LMB</strong></li>
+					<li><strong>SHIFT + CTRL + ALT + LMB</strong> ，多选</li>
+
+				</ul>
+				<p>循环边的相关操作：</p>
+				<p>1 滑移，<strong>g g</strong></p>
+				<p>2 融并，<strong>Ctrl + X</strong></p>
+				<p>3 倒角，<strong>Ctrl + B</strong></p>
+				<p>4 法向收缩</p>
+				<p>5 卡线</p>
+				<h2>7.6 四边形的优势</h2>
+				<p>为什么建模偏爱四边形？方便施加算法</p>
+				<h2>7.7 桥接循环边</h2>
+				<p><strong>桥接</strong> <em>Bridge Edge Loops</em></p>
+				<p>其中，</p>
+				<ul>
+					<li>来自同一物体</li>
+					<li>边数相同</li>
+					<li>桥接后，检查面朝向</li>
+
+				</ul>
+				<p>桥接的应用：</p>
+				<p>1 对接</p>
+				<p>2 打洞</p>
+				<h2><em>7.8✲ 旋钮</em></h2>
+				<p><img src="img/image-20231008085230254.png" alt="image-20231008085230254" style="zoom:67%;" /></p>
+				<h2>8.1 顶点移动、滑移</h2>
+				<p>顶点操作，即一般的&#39;<strong>布线</strong>&#39;</p>
+				<p>切到顶点模式：</p>
+				<ul>
+					<li>移动，<strong>g</strong></li>
+					<li>缩放，<strong>s</strong></li>
+					<li>旋转，<strong>r</strong></li>
+
+				</ul>
+				<p>其中，<strong>g z</strong> 表示锁定 z 轴移动</p>
+				<p>顶点滑移，用于微调顶点的位置。</p>
+				<p><strong>shift + V</strong></p>
+				<p><strong>g g</strong></p>
+				<h2>8.2 顶点删除/连接</h2>
+				<p>删除与融并</p>
+				<ul>
+					<li>删除 <strong>X</strong> ，则相连的边、面一并删除</li>
+					<li>融并 <strong>Ctrl + X</strong> ，移走顶点、融合邻边</li>
+
+				</ul>
+				<p>选中两个顶点</p>
+				<ul>
+					<li>按 <strong>F</strong> 键，连接顶点，成一条边，<em>Fill</em></li>
+					<li>按 <strong>J</strong> 键，连接顶点，并切割平面（或 <strong>K</strong> 键切割），<em>Join</em></li>
+
+				</ul>
+				<p>即，有面则有 <strong>J</strong> / <strong>K</strong> 切割，没有就有 <strong>F</strong> 连接。</p>
+				<h2>8.3 顶点合并</h2>
+				<p><strong>统计信息</strong>，当前 Mesh 中点、线、面的个数</p>
+				<ul>
+					<li>视图叠加层，&#39;<strong>统计信息</strong>&#39;</li>
+					<li>设置|界面|编辑器|状态栏，&#39;<strong>场景统计数据</strong>&#39;</li>
+
+				</ul>
+				<p><strong>顶点合并</strong> <em>Merge</em>，即&#39;<strong>焊接</strong>&#39;，合并邻近或重叠的顶点 </p>
+				<p>1 合并邻近的顶点：</p>
+				<ul>
+					<li>选中几个非常靠近的顶点</li>
+					<li>右键，（或按 <strong>M</strong> 键），<strong>合并顶点|到中心</strong></li>
+
+				</ul>
+				<p>2 合并重叠的顶点：</p>
+				<ul>
+					<li>
+						<p>打开 <strong>X-ray</strong> 模式</p>
+					</li>
+					<li>
+						<p>选中重叠点，在统计信息里观察顶点个数</p>
+					</li>
+					<li>
+						<p>右键，<strong>顶点合并|到中心</strong></p>
+						<p>或者，直接 <strong>A</strong> 键全选所有顶点，<strong>顶点合并|按距离</strong></p>
+					</li>
+
+				</ul>
+				<p><strong>自动合并</strong>选项：打开<strong>自动合并</strong>，当两个顶点重叠时，自动焊接</p>
+				<p>一般与 顶点吸附 联用</p>
+				<h2>8.4 顶点倒角</h2>
+				<p>顶点倒角。<strong>CTRL + SHIFT + B</strong></p>
+				<p>其中，</p>
+				<ul>
+					<li>2邻边</li>
+					<li>3邻边</li>
+					<li>4邻边</li>
+
+				</ul>
+				<h2>8.5 顶点挤出、扩展</h2>
+				<p>挤出顶点，成一条边。</p>
+				<p><strong>e</strong> ，挤出顶点</p>
+				<p><strong>e z</strong> ，挤出顶点，沿z轴</p>
+				<p>扩展顶点，用于调整现有的边。</p>
+				<p><strong>Alt + d</strong> ，其中，鼠标点击的位置决定是哪一条邻边。</p>
+				<h2>8.6 衰减编辑</h2>
+				<p>衰减编辑 <em>Proportional Edit</em></p>
+				<p>拉扯顶点，形变（拉力）沿边线传导、并衰减</p>
+				<p><strong>衰减半径</strong>，即衰减影响的范围。</p>
+				<p>1 微调</p>
+				<p>2 滚轮调整</p>
+				<p>其中，鼠标左键不要松开，同时转动滚轮。</p>
+				<p><strong>衰减曲线</strong>，用于衰减的方式。如：平滑、尖锐</p>
+				<h2><em>8.7✲ 瓶子</em></h2>
+				<p><img src="img/image-20231008085420185.png" alt="image-20231008085420185" style="zoom:67%;" /></p>
+				<h2><em>8.8✲ 郁金香</em></h2>
+				<p><img src="img/image-20231008085452726.png" alt="image-20231008085452726" style="zoom: 50%;" /></p>
+				<h2>9.1 <em>ExtraObjects</em> 插件</h2>
+				<p><strong><em>Extra Objects</em></strong> ，提供更多基本形状。</p>
+				<p>编辑|偏好设置|<strong>插件</strong></p>
+				<h2>9.2 各种形状</h2>
+				<p><em>Extra Objects</em> 提供的各种形状：</p>
+				<ul>
+					<li><strong><em>Round Cube</em></strong> 圆角立方体</li>
+					<li><strong><em>Torus</em></strong> 环形</li>
+					<li><strong><em>Math Function</em></strong> 数学函数曲面 z = <em>f</em> (x,y)</li>
+					<li><strong><em>Math Function</em></strong> | <strong><em>Regular Solid</em></strong> 正多面体</li>
+					<li><strong><em>Gear</em></strong> 齿轮</li>
+					<li><strong><em>Pipe Joint</em></strong> <strong>管道接头</strong></li>
+					<li><strong><em>Diamond</em></strong> 钻石</li>
+
+				</ul>
+				<p><strong>局部视图</strong> <em>Local View</em> ，也可称作 <em>Solo</em> 模式。</p>
+				<p>按快捷键 <strong>/</strong> 进入，再按退出。</p>
+				<h2><em>9.3✲ 五角星</em></h2>
+				<p><img src="img/image-20231008085533772.png" alt="image-20231008085533772" style="zoom: 50%;" /></p>
+				<h2><em>9.4✲ 镂空结构</em></h2>
+				<p><img src="img/image-20231008090240339.png" alt="image-20231008090240339" style="zoom: 50%;" /></p>
+				<h2>10.1 添加形状</h2>
+				<p>添加形状。</p>
+				<p>有两种方式。</p>
+				<ul>
+					<li>在 <strong>物体模式</strong> 下，添加网格</li>
+					<li>在 <strong>编辑模式</strong> 下，添加形状</li>
+
+				</ul>
+				<p>要点与细节：</p>
+				<p>1 同一个物体内，其顶点可以不必相连</p>
+				<p>2 极端情况下，一个物体内可以一个顶点都没有</p>
+				<h2>10.2 合并与分离</h2>
+				<p>合并物体（<em>Join</em>）。 快捷键 <strong>Ctrl + J</strong> 。</p>
+				<p>其中，当选择多个物体时，</p>
+				<ul>
+					<li><strong><em>Selected</em></strong> 选中项，橙红色</li>
+					<li><strong><em>Active</em></strong> 活动项，橙黄色</li>
+
+				</ul>
+				<p>合并的方向为：<em>Selected</em> <strong>→</strong> <em>Active</em></p>
+				<p>分离。选中一部分顶点，分离。</p>
+				<p>编辑模式下 <strong>Ctrl + L</strong> ，（<em>Link</em>）选中相连项</p>
+				<p>拆分。选中一部分顶点，拆分，但仍属于同一物体。（用的不多）</p>
+				<h2>10.3 分离借形</h2>
+				<p><strong>分离借形</strong> ，一种常见的手法。</p>
+				<p>1 <strong>Shift + D</strong> ，复制要借的结构</p>
+				<p>2 <strong>ESC</strong> 回到原位，右键分离</p>
+				<p>3 编辑分离出来的形状，生长出新的形状</p>
+				<h2>10.4 <em>BoolTool</em> 插件</h2>
+				<p><strong><em>Bool Tool</em></strong> 插件，布尔工具</p>
+				<p>用于对两个模型做交、并、差运算</p>
+				<p>并集：A + B</p>
+				<p>交集：A ∩ B</p>
+				<p>差集：A - B</p>
+				<p>偏好设置，启用 <strong>Bool Tool</strong> 插件</p>
+				<p>1 先选圆柱体、再加选正方体 则 <strong>Active</strong> = 正方体， <strong>Selected</strong> = 圆柱体</p>
+				<p>2 按 <strong>n</strong> 键，打开右侧边栏，编辑|Bool Tool</p>
+				<ul>
+					<li><strong>Diference</strong> 差集 A - B</li>
+					<li><strong>Union</strong> 并集 A + B</li>
+					<li><strong>Intersect</strong> 交集 A ∩ B</li>
+					<li>Slice 切片</li>
+
+				</ul>
+				<p>除 <strong>BoolTool</strong> 之外，还有 <strong>布尔修改器</strong> 等其他地方也是布尔运算</p>
+				<h2><em>10.5✲ 甜筒冰淇淋</em></h2>
+				<p>&nbsp;</p>
+				<h2>11.1 曲线</h2>
+				<p>曲线 <strong>Curve</strong> ，也称为 样条 ，用于描绘平滑的曲线和形状</p>
+				<p>一般分为两种：</p>
+				<ul>
+					<li><strong>贝塞尔曲线</strong></li>
+					<li><strong>NURBS曲线</strong></li>
+
+				</ul>
+				<p>添加一条曲线，演示：</p>
+				<ul>
+					<li>添加|曲线|<strong>贝塞尔曲线</strong></li>
+					<li>按 <strong>7</strong> ，进入顶视图</li>
+					<li>按 <strong>TAB</strong> ，编辑曲线</li>
+					<li>选择移动工具，移动<img src="img/image-20231009214003207.png" referrerpolicy="no-referrer"
+							alt="image-20231009214003207"> <strong>控制点</strong> 或 <strong>控制柄</strong></li>
+					<li>按 <strong>TAB</strong> ，退出编辑</li>
+
+				</ul>
+				<p>接下来，可以将曲线转换为网格，或其他用途。</p>
+				<p>在大纲视图中，曲线有自己独特的图标<img src="img/image-20231009213602746.png" referrerpolicy="no-referrer"
+						alt="image-20231009213602746"></p>
+				<h2>11.2 控制点</h2>
+				<p>添加一条贝塞尔曲线，编辑。</p>
+				<p>选中控制点时，显示手柄。</p>
+				<ul>
+					<li>控制点</li>
+					<li>控制柄</li>
+
+				</ul>
+				<p>两种操作方式：</p>
+				<p>1 框选，移动<img src="img/image-20231009214003207.png" referrerpolicy="no-referrer"
+						alt="image-20231009214003207">或 <strong>g</strong> 键</p>
+				<p>2 调整 <img src="img/image-20231009214011405.png" referrerpolicy="no-referrer"
+						alt="image-20231009214011405"></p>
+				<p> 手柄可以伸长、缩短，会影响曲线的形状。</p>
+				<p>（4个点来定义一条曲线，2端点、2参考点）</p>
+				<h2>11.3 编辑曲线</h2>
+				<p>1 添加控制点</p>
+				<ul>
+					<li><strong>细分</strong> ：选中两个控制点，右键，细分</li>
+					<li><strong>挤出</strong> ：选中端点，按 <strong>E</strong> 键</li>
+
+				</ul>
+				<p>2 删除控制点</p>
+				<ul>
+					<li><strong>融并顶点</strong> ：选中控制点，按 <strong>X</strong> 键</li>
+
+				</ul>
+				<p>另外，按 <strong>A</strong> 键，全选所有控制点</p>
+				<p>选中一个控制柄，按 <strong>V</strong> 键，控制柄类型</p>
+				<ul>
+					<li><strong>自由</strong>，自由调节</li>
+					<li><strong>对齐</strong>，左右同步</li>
+					<li><strong>矢量</strong>，直接连接</li>
+					<li><strong>自动</strong>，自动平滑</li>
+
+				</ul>
+				<p>左右控制柄可以单独设置</p>
+				<h2>11.4 钢笔工具</h2>
+				<p><strong>曲线笔</strong> ，即钢笔工具。</p>
+				<p>1 挤出 <strong>LMB</strong> ，添加一个控制点</p>
+				<p>2 删除 <strong>Ctrl + LMB</strong> ，点击并删除现有的控制点</p>
+				<p>3 插入 <strong>Ctrl + LMB</strong> ，点击线段插入一个控制点</p>
+				<p>4 调整控制点/控制柄 <strong>LMB</strong> </p>
+				<p>5 调整线段 <strong>LMB</strong></p>
+				<p>6 切换控制点类型 <strong>鼠标双击</strong></p>
+				<p>7 闭合曲线 <strong>LMB</strong></p>
+				<p>曲线笔，键位设置。</p>
+				<ul>
+					<li>取消 <strong>LMB</strong> &#39;<strong>闭合样条线</strong>&#39;</li>
+					<li>取消 <strong>LMB</strong> &#39;<strong>挤出</strong>&#39;</li>
+					<li>添加 <strong>LMB</strong> &#39;<strong>空白位置取消全选</strong>&#39; ，或 <strong>ALT + A</strong></li>
+					<li>添加 <strong>Ctrl + LMB</strong> &#39;<strong>挤出</strong>&#39;</li>
+
+				</ul>
+				<h2>11.5 曲线的更多操作</h2>
+				<p>几个曲线相关的操作。</p>
+				<p>1 延伸</p>
+				<p>按 <strong>E</strong> 挤出，或钢笔</p>
+				<p>2 闭合</p>
+				<p>选中两个点， 按 <strong>F</strong> 连接</p>
+				<p>3 拆分</p>
+				<p>选中线段的两点，按 <strong>Y</strong> 拆分、<strong>G</strong> 移动 或 <strong>X</strong> 删除</p>
+				<p>4 法向：曲线的方向，自起始点到结束点</p>
+				<p> （1）显示：<strong>试图叠加层|法向</strong></p>
+				<p> （2）翻转：<strong>线段|切换方向</strong></p>
+				<h2>11.6 参考图</h2>
+				<p><strong>参考图</strong>，方便对照。</p>
+				<p>例如，</p>
+				<p>1 切到 正交视图</p>
+				<p>2 添加 背景图</p>
+				<p>3 按 <strong>g</strong> 移动、 <strong>s</strong> 缩放、 <strong>r</strong> 旋转</p>
+				<p>4 物体数据属性，调整 透明度</p>
+				<p>更多选项。</p>
+				<p>例如，直接拖一个图片过来。</p>
+				<p>1 先切到正交视图，再拖</p>
+				<p>2 边 <em>Side</em> ：仅显示<strong>正面</strong></p>
+				<p>3 深度：显示在<strong>后面</strong>，不遮挡别的物体</p>
+				<p>4 在<strong>透视</strong>图下不显示</p>
+				<h2>11.7 更多曲线形状</h2>
+				<p>启动插件 <strong>Add Curve：Extra Objects</strong></p>
+				<p>更多预置的曲线形状。</p>
+			</div>
+		</section>
+
+		<section class="contact content">
+			<div class="contact-content">
+				<h1>联系我<span><i class="bx bx-envelope"></i></span></h1>
+				<p>QQ：3204791864</p>
+				<p>Email：Zi_Yan416@163.com</p>
+				<p>Github：https://github.com/ZiYan416</p>
+			</div>
+			<div class="contact-img">
+				<img id="contact-img" src="img/Milk.jpg" alt="" />
+			</div>
+		</section>
 	</body>
 	<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-	<script src="script.js"></script>
+	<script src="js/script.js"></script>
 </html>
