@@ -119,7 +119,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	breadButton.addEventListener('click', () => {
 		drop.classList.toggle('open');
 	});
-
+	document.addEventListener('click', (event) => {
+	  const target = event.target;
+	  const isBreadButton = target.closest('#bread');
+	  const isDrop = target.closest('#drop');
+	
+	  if (!isBreadButton && !isDrop) {
+	    drop.classList.remove('open');
+	  }
+	});
 
 	//播放事件
 	playButton.addEventListener('click', () => {
