@@ -96,7 +96,7 @@ body {
 	position: fixed;
 	right: 0;
 	margin-right: 10%;
-	width: 10%;
+	width: 6rem;
 	margin-top: 60px;
 	z-index: 101;
 	background: #FFDEAD;
@@ -164,12 +164,6 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 4.375rem 10% 0;
-}
-
-@media(max-width: 1300px) {
-	.home {
-		flex-direction: column;
-	}
 }
 
 .home.hide {
@@ -327,8 +321,12 @@ body {
 }
 
 @media(max-width: 1300px) {
+	.home {
+		flex-direction: column;
+	}
+	
 	.home-player {
-		margin-top: 6rem;
+		margin-top: 4rem;
 		margin-left: 6rem;
 	}
 }
@@ -481,6 +479,9 @@ body {
 .about-content {
 	margin-top: 4.375rem;
 	max-width: 100rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .about-content h1 {
@@ -577,53 +578,70 @@ body {
 }
 
 @media(max-width: 1300px) {
+	.about-content {
+		margin-top: 0rem;
+	}
+	
+	.about-content h1 {
+		font-size: 2.8rem;
+		margin-bottom: 1rem;
+	}
+	
+	.about-content h3 {
+		font-size: 1.4rem;
+		margin-bottom: 1.25rem;
+	}
+	
 	.accordion {
-		width: 37.5rem;
-		height: 15rem;
-		margin: 3.75rem auto;
-		margin-top: 5rem;
+		width: 30rem;
+		height: 37.5rem;
+		margin: auto 4.5rem;
+		margin-top: 4rem;
 		box-shadow: 0 0 0.375rem 0.075rem rgba(255, 222, 173, 0.4);
 	}
 
 	.accordion li {
-		width: 7.5rem;
-		height: 15rem;
+		width: 30rem;
+		height: 7.5rem;
 		border-left: 0.0375rem solid #aaa;
 		box-shadow: 0 0 0.9375rem 0.375rem rgba(255, 222, 173, 0.4);
 	}
 
 	.accordion ul:hover li {
-		width: 3.375rem;
+		height: 3.375rem;
+		width: 30rem
 	}
 
 	.accordion ul li:hover {
-		width: 24rem;
+		height: 24rem;
+		width: 30rem
 	}
 
 	.accordion p {
-		font-size: 0.6rem;
-		margin: 0.75rem 0.375rem;
-		margin-left: 8.1rem;
+		font-size: 1rem;
+		margin: 2rem 2rem;
+		margin-top: 8.1rem;
 	}
 
 	.accordion .title {
-		height: 15rem;
-		width: 7.5rem;
+		top: 0;
+		height: 7.5rem;
+		width: 30rem;
 	}
 
 	.accordion .title a {
-		writing-mode: tb-rl;
-		letter-spacing: 0.2625rem;
-		margin-left: 1.125rem;
-		font-size: 1.875rem;
-		padding: 0.75rem;
+		writing-mode: horizontal-tb;
+		letter-spacing: 1rem;
+		text-align: center;
+		font-size: 2rem;
+		padding: 2rem;
 	}
 }
 
 .text {
 	width: 75%;
 	margin-top: 1.875rem;
-	margin-left: 12.5%;
+	
 }
 
 .text #header {
@@ -826,7 +844,7 @@ body {
 
 @media(max-width: 800px) {
 	.notetab {
-		width: 13rem;
+		width: 9rem;
 		margin-top: 1.875rem;
 		border-radius: 0.75rem;
 		box-shadow: 0 0 1.125rem #FFDEAD;
@@ -850,7 +868,7 @@ body {
 
 	.notes-content {
 		margin-top: -3.36rem;
-		margin-left: 14.75rem;
+		margin-left: 9.75rem;
 		width: 30rem;
 	}
 
