@@ -82,7 +82,7 @@ body {
 	text-shadow: 0 0 20px #fff;
 }
 
-@media(min-width: 768px) {
+@media(min-width: 1000px) {
     .header .bread-btn {
         display: none;
     }
