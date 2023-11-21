@@ -9,7 +9,12 @@ for (let i = 0; i < navbarItem.length; i++) {
 			contentItem[j].classList.add('hide');
 		}
 		this.classList.add('active')
-		contentItem[i].classList.remove('hide');
+		if (i <= 3) {
+			contentItem[i].classList.remove('hide');
+		}
+		if (i > 3) {
+			contentItem[i - 4].classList.remove('hide');
+		}
 	})
 }
 for (let i = 1; i < contentItem.length; i++) {
@@ -25,17 +30,17 @@ var typed = new Typed(".multiple-text", {
 	loop: true
 })
 
-//监听页面尺寸变化，动态设置 html 下 font-size大小
-window.onresize=() =>{
-	setHtmlFontSize();
-}
+// //监听页面尺寸变化，动态设置 html 下 font-size大小
+// window.onresize=() =>{
+// 	setHtmlFontSize();
+// }
 
-function setHtmlFontSize() {
-	const clientWidth= document.body.clientWidth;
-	document.querySelector('html').style.fontSize=clientWidth /100+'px'
-}
+// function setHtmlFontSize() {
+// 	const clientWidth= document.body.clientWidth;
+// 	document.querySelector('html').style.fontSize=clientWidth /100+'px'
+// }
 
-setHtmlFontSize();
+// setHtmlFontSize();
 
 window.addEventListener('DOMContentLoaded', (event) => {
 	// 获取图片元素
@@ -96,6 +101,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	}
 
 	const playButton = document.getElementById('play');
+	const breadButton = document.getElementById('bread');
 	const audio = document.getElementById('audio');
 	const progressBar = document.getElementById('bar');
 	const progressOverlay = document.getElementById('overlay');
@@ -108,6 +114,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
 	const listButton = document.getElementById('list');
 	const songNum = document.getElementById('num');
 	const volumeButton = document.getElementById('volume');
+
+	const drop = document.querySelector('.drop');
+	breadButton.addEventListener('click', () => {
+		drop.classList.toggle('open');
+	});
+
 
 	//播放事件
 	playButton.addEventListener('click', () => {

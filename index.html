@@ -17,7 +17,28 @@
 				<a href="#" class="item" style="--i: 3">Notes</a>
 				<a href="#" class="item" style="--i: 4">Contact</a>
 			</nav>
+			<div id="bread" class="bread-btn">
+				<span><i class='bx bx-list-ul'></i></span>
+			</div>
 		</header>
+		<div id="drop" class="drop">
+			<div class="drop-container">
+				<ul id="droplist">
+					<a href="#" class="item">
+						<li>Home</li>
+					</a>
+					<a href="#" class="item">
+						<li>About</li>
+					</a>
+					<a href="#" class="item">
+						<li>Notes</li>
+					</a>
+					<a href="#" class="item">
+						<li>Contact</li>
+					</a>
+				</ul>
+			</div>
+		</div>
 
 		<section class="home content">
 			<div class="home-content">
@@ -75,19 +96,18 @@
 						<span><i id="list" class="bx bxs-playlist"></i></span>
 					</section>
 				</div>
-		</section>
-
-		<div class="sidebar">
-			<div class="list-container">
-				<div class="listtitle">
-					<span id="bold">播放列表</span>
-					<p><span id="num"></span>首歌曲</p>
+				<div class="sidebar">
+					<div class="list-container">
+						<div class="listtitle">
+							<span id="bold">播放列表</span>
+							<p><span id="num"></span>首歌曲</p>
+						</div>
+						<ul id="sidebarList">
+							<li></li><!-- 歌曲列表在script文件中引入 -->
+						</ul>
+					</div>
 				</div>
-				<ul id="sidebarList">
-					<li></li><!-- 歌曲列表在script文件中引入 -->
-				</ul>
-			</div>
-		</div>
+		</section>
 
 		<!-- audio标签 -->
 		<section class="audio">
@@ -99,167 +119,165 @@
 				<h1>关于</h1>
 				<h3>这是一个简单的个人主页，提供了音乐播放器等功能<br />
 					以下是具体功能的描述：</h3>
-				<div class="present">
-					<div class="accordion">
-						<ul>
-							<li>
-								<div class="title">
-									<a>页面结构</a>
-								</div>
-								<p>
-									<a href="#header">header</a> ：页面的页眉，包含网站的logo和导航栏。<br />
-									<a href="#section">section</a> class="home content" ：主页部分的容器。<br />
-									<a href="#div">div</a> class="home-content" ：主页内容的容器，包含个人信息和社交媒体链接。<br />
-									<a href="#div">div</a> class="home-player" ：音乐播放器的容器。<br />
-									<a href="#div">div</a> class="sidebar" ：侧边栏容器，显示播放列表。<br />
-									<a href="#section">section</a> class="audio" ：音频标签的容器，用于播放音乐。<br />
-									<a href="#section">section</a> class="about content" ：关于页面的容器。<br />
-								</p>
-							</li>
-							<li>
-								<div class="title">
-									<a>导航栏</a>
-								</div>
-								<p><a href="#nav">nav</a> class="navbar" ：导航栏容器。<br />
-									包含"Home"、"About"、"Skills"、"Notes"和"Contact"五个链接，供用户导航到相应的页面。<br />
-									Home ：网页的主页，包含了音乐播放器的功能。<br />
-									About ：网页的功能实现讲解，介绍了网页的主体功能。<br />
-									Skills ：<br />
-									Notes ：<br />
-									Contact ：<br />
-								</p>
-							</li>
-							<li>
-								<div class="title">
-									<a>主页内容</a>
-								</div>
+				<div class="accordion">
+					<ul>
+						<li>
+							<div class="title">
+								<a>页面结构</a>
+							</div>
+							<p>
+								<a href="#header">header</a> ：页面的页眉，包含网站的logo和导航栏。<br />
+								<a href="#section">section</a> class="home content" ：主页部分的容器。<br />
+								<a href="#div">div</a> class="home-content" ：主页内容的容器，包含个人信息和社交媒体链接。<br />
+								<a href="#div">div</a> class="home-player" ：音乐播放器的容器。<br />
+								<a href="#div">div</a> class="sidebar" ：侧边栏容器，显示播放列表。<br />
+								<a href="#section">section</a> class="audio" ：音频标签的容器，用于播放音乐。<br />
+								<a href="#section">section</a> class="about content" ：关于页面的容器。<br />
+							</p>
+						</li>
+						<li>
+							<div class="title">
+								<a>导航栏</a>
+							</div>
+							<p><a href="#nav">nav</a> class="navbar" ：导航栏容器。<br />
+								包含"Home"、"About"、"Skills"、"Notes"和"Contact"五个链接，供用户导航到相应的页面。<br />
+								Home ：网页的主页，包含了音乐播放器的功能。<br />
+								About ：网页的功能实现讲解，介绍了网页的主体功能。<br />
+								Skills ：<br />
+								Notes ：<br />
+								Contact ：<br />
+							</p>
+						</li>
+						<li>
+							<div class="title">
+								<a>主页内容</a>
+							</div>
 
-								<p>Hello, It's Me ：简短的问候语。<br />
-									808 ：显示个人名称。<br />
-									Here to do: ：展示待办事项的动态效果。<br />
-									个人简介的段落，包含了一段法语和英语的句子，引用于加缪的名言。<br />
-									<a href="#div">div</a> class='social media'
-									：社交媒体链接的容器，包含了TikTok、Facebook、Google和GitHub的链接图标。<br />
-									点击对应的图标后跳转至对应的社交账户页面。
-								</p>
+							<p>Hello, It's Me ：简短的问候语。<br />
+								808 ：显示个人名称。<br />
+								Here to do: ：展示待办事项的动态效果。<br />
+								个人简介的段落，包含了一段法语和英语的句子，引用于加缪的名言。<br />
+								<a href="#div">div</a> class='social media'
+								：社交媒体链接的容器，包含了TikTok、Facebook、Google和GitHub的链接图标。<br />
+								点击对应的图标后跳转至对应的社交账户页面。
+							</p>
 
-							</li>
-							<li>
-								<div class="title">
-									<a>音乐播放器</a>
-								</div>
+						</li>
+						<li>
+							<div class="title">
+								<a>音乐播放器</a>
+							</div>
 
-								<p>音乐播放器包含了音乐的进度条、歌曲信息和控制按钮。<br />
-									显示音乐播放器的封面图片。<br />
-									进度条显示当前播放进度和歌曲长度，并可以根据当前播放歌曲实时更新。<br />
-									歌曲信息包括标题和作者，并可以根据当前播放歌曲实时更新。<br />
-									控制按钮包括音量控制按钮、上一首、播放/暂停、下一首和播放列表按钮。<br />
-									点击对应的功能按钮可以执行相应的操作，实现了自定义audio控件元素。</p>
+							<p>音乐播放器包含了音乐的进度条、歌曲信息和控制按钮。<br />
+								显示音乐播放器的封面图片。<br />
+								进度条显示当前播放进度和歌曲长度，并可以根据当前播放歌曲实时更新。<br />
+								歌曲信息包括标题和作者，并可以根据当前播放歌曲实时更新。<br />
+								控制按钮包括音量控制按钮、上一首、播放/暂停、下一首和播放列表按钮。<br />
+								点击对应的功能按钮可以执行相应的操作，实现了自定义audio控件元素。</p>
 
-							</li>
-							<li>
-								<div class="title">
-									<a>侧边栏</a>
-								</div>
+						</li>
+						<li>
+							<div class="title">
+								<a>侧边栏</a>
+							</div>
 
-								<p>侧边栏显示了播放列表的标题和歌曲数量。<br />
-									<a href="#ul">ul</a> id="sidebarList" ：播放列表的容器，通过JavaScript生成播放列表。<br />
-									其中当前播放列表显示的歌曲首数随着实际播放列表中音乐数量实时更新。<br />
-									播放列表是通过script代码功能自动实现的，因而会自动更新。<br />
-									点击对应的歌曲名称后会自动切歌。
-								</p>
+							<p>侧边栏显示了播放列表的标题和歌曲数量。<br />
+								<a href="#ul">ul</a> id="sidebarList" ：播放列表的容器，通过JavaScript生成播放列表。<br />
+								其中当前播放列表显示的歌曲首数随着实际播放列表中音乐数量实时更新。<br />
+								播放列表是通过script代码功能自动实现的，因而会自动更新。<br />
+								点击对应的歌曲名称后会自动切歌。
+							</p>
 
-							</li>
-						</ul>
-					</div>
-					<div class="text">
-						<h3 id="header">header标签</h3>
-						<p>
-							HTML中的 <span id="bold">header</span>
-							标签用于定义文档或文档节的页眉部分。它通常包含网站或应用程序的标志、标题、导航栏和其他与页面整体相关的内容。<br />
-							以下是 <span id="bold">header</span> 标签的一些主要作用：<br />
-							1. 标识网站或应用程序： <span id="bold">header</span>
-							可以包含网站或应用程序的标志、标题和其他标识元素，帮助用户在页面上快速识别和识别所访问的网站或应用程序。<br />
-							2. 导航栏：常见的做法是将网站的主导航栏放置在 <span id="bold">header</span>
-							中，以提供对网站不同部分的导航链接。这使得导航栏在整个页面中保持一致，并提供易于访问的导航功能。<br />
-							3. 页面级别的标题或描述： <span id="bold">header</span>
-							中的文本内容可以用于呈现页面的主要标题或简短描述，使用户对页面内容有一个快速的了解。<br />
-							4. 页眉内容：除了标志、标题和导航栏之外， <span id="bold">header</span>
-							还可以包含其他与页面整体相关的内容，如联系信息、搜索框、社交媒体链接等。<br />
-							总的来说， <span id="bold">header</span>>
-							标签提供了一个容器，用于将与页面整体相关的内容组织在一起，并帮助用户快速识别和导航到页面的不同部分。它在构建语义化的HTML结构时起到了重要的作用。<br />
-						</p>
-						<h3 id="section">section标签</h3>
-						<p>
-							HTML中的 <span id="bold">section</span>
-							标签用于定义文档中的一个独立的部分或区块。它通常表示文档的逻辑或主题上的分割，可以将相关内容组织在一起。<br />
-							以下是 <span id="bold">section</span> 标签的一些主要作用：<br />
-							1. 逻辑分割： <span id="bold">section</span> 标签用于将文档内容分割成不同的逻辑部分。每个 <span
-								id="bold">section</span>
-							可以包含独立的主题、主要内容或功能模块，使得文档的结构更加清晰和有组织。<br />
-							2. 内容组织： <span id="bold">section</span> 可以用于组织相关的内容，使其在视觉上或语义上形成一个完整的区块。例如，一个新闻网站可以使用
-							section
-							将每篇新闻文章包装在一个独立的区块中。<br />
-							3. 标题和子标题： <span id="bold">section</span>
-							可以包含一个标题或子标题，用于描述该部分的内容或主题。这有助于读者快速了解该部分的主要内容。<br />
-							4. 样式和样式隔离：通过给 <span id="bold">section</span>
-							添加class或ID，可以为每个部分应用特定的样式或脚本。这样可以更好地控制和定制每个部分的外观和行为。<br />
-							5. 语义化的HTML： <span id="bold">section</span>
-							标签的使用有助于构建语义化的HTML结构，提高文档的可访问性和可理解性。它使得文档结构更加清晰，并为搜索引擎和辅助技术提供更准确的信息。<br />
-							总的来说， <span id="bold">section</span>
-							标签用于划分和组织文档内容，提供更好的结构和语义化，使得页面的逻辑更清晰，并且可以更好地控制和样式化各个独立的部分。<br />
-						</p>
-						<h3 id="div">div标签</h3>
-						<p>
-							HTML中的 <span id="bold">div</span> 标签是一个通用的容器元素，用于组合其他HTML元素或内容，并将它们作为一个整体进行样式化或操作。<br />
-							以下是 <span id="bold">div</span> 标签的一些主要作用：<br />
-							1. 分组内容： <span id="bold">div</span>
-							标签可以用于将相关的HTML元素或内容组合在一起，并将它们作为一个逻辑组进行处理。它提供了一种分组元素的方式，使得可以将一组相关的元素包装在一个容器中。<br />
-							2. 样式化和布局： <span id="bold">div</span> 标签是CSS样式化和布局的主要工具之一。通过为 <span id="bold">div</span>
-							添加class或ID，可以为其应用特定的样式规则，控制其外观、位置和布局。<br />
-							3. JavaScript操作： <span id="bold">div</span> 标签可以用作JavaScript操作的目标容器。通过选择和操作 <span
-								id="bold">div</span>
-							元素，可以动态地添加、修改或删除其中的内容，实现与用户交互和动态页面更新相关的功能。<br />
-							4. 语义化的HTML：尽管 <span id="bold">div</span> 本身没有明确的语义，但它在构建语义化的HTML结构时起到了重要的作用。通过将相关的内容包装在 div
-							中，可以提高HTML文档的可读性和可维护性。<br />
-							5. 占位符： <span id="bold">div</span> 标签可以用作占位符，为将来的内容预留空间。在页面开发过程中，可以使用 <span
-								id="bold">div</span> 作为临时容器，以便在后续的开发阶段填充实际内容。<br />
-							总的来说， <span
-								id="bold">div</span>标签是一个通用的容器元素，用于组合和包装其他HTML元素或内容。它在样式化、布局、JavaScript操作和语义化的HTML结构方面发挥着重要作用，并提供了一种灵活的方式来组织和处理页面上的内容。<br />
-						</p>
-						<h3 id="nav">nav标签</h3>
-						<p>
-							HTML中的 <span id="bold">nav</span> 标签用于定义页面的导航部分，即网站或应用程序的主要导航菜单。<br />
-							以下是 <span id="bold">nav</span> 标签的一些主要作用：<br />
-							1. 导航菜单： <span id="bold">nav</span>
-							标签用于包含网站或应用程序的主要导航菜单。它可以包含链接或按钮，用于导航到网站的不同页面或应用程序的不同功能区域。<br />
-							2. 语义化的HTML：使用 <span id="bold">nav</span>
-							标签可以提高HTML文档的语义化。它明确地标识出包含导航的部分，使得搜索引擎和辅助技术能够更好地理解和解释导航菜单的作用。<br />
-							3. 可访问性： <span id="bold">nav</span> 标签有助于提高页面的可访问性。屏幕阅读器和辅助技术可以使用 <span id="bold">nav</span>
-							标签来识别导航菜单，并向用户提供更好的导航和定位功能。<br />
-							4. 样式化和布局：通过为 <span id="bold">nav</span>
-							标签添加class或ID，可以为导航菜单应用特定的样式规则，以实现自定义的外观和布局。这使得导航菜单的样式和风格能够与页面的其他部分进行区分。<br />
-							总的来说， <span id="bold">nav</span>
-							标签用于定义页面的导航部分，提供了一种语义化的方式来标识和组织导航菜单。它在页面的可访问性、语义化和样式化方面起到了重要的作用，帮助用户更好地导航和浏览网站或应用程序的内容。<br />
-						</p>
-						<h3 id="ul">ul标签</h3>
-						<p>
-							HTML中的 <span id="bold">ul</span> 标签用于创建无序列表（unordered
-							list）。无序列表是一种用于展示项目列表的标记方式，其中的项目没有特定的顺序或层次关系。<br />
-							以下是 <span id="bold">ul</span> 标签的一些主要作用：<br />
-							1. 创建无序列表： <span id="bold">ul</span> 标签用于创建无序列表，其中的项目会以符号（通常是圆点或实心圆）作为项目符号进行显示。<br />
-							2. 列表项： <span id="bold">ul</span> 标签中的每个列表项使用 <span id="bold">li</span> 标签进行包裹。 <span
-								id="bold">li</span> 标签定义了列表中的每个项目，可以包含文本、图像、链接或其他HTML元素。<br />
-							3. 分组相关内容：无序列表适用于将相关的项目进行分组显示。例如，在一个产品特点列表中，每个特点可以作为一个列表项进行展示。<br />
-							4. 语义化的HTML：使用 <span id="bold">ul</span>
-							标签可以提高HTML文档的语义化。它明确地标识出包含无序列表的部分，使得搜索引擎和辅助技术能够更好地理解和解释列表的结构和含义。<br />
-							5. 样式化和布局：通过为 <span id="bold">ul</span> 和 <span id="bold">li</span>
-							标签添加class或ID，可以为无序列表应用特定的样式规则，以实现自定义的外观和布局。<br />
-							总的来说， <span id="bold">ul</span>
-							标签用于创建无序列表，其中的项目没有特定的顺序或层次关系。它在组织和展示项目列表、语义化的HTML结构以及样式化和布局方面起到了重要的作用。<br />
-						</p>
-					</div>
+						</li>
+					</ul>
 				</div>
+				<div class="text">
+					<h3 id="header">header标签</h3>
+					<p>
+						HTML中的 <span id="bold">header</span>
+						标签用于定义文档或文档节的页眉部分。它通常包含网站或应用程序的标志、标题、导航栏和其他与页面整体相关的内容。<br />
+						以下是 <span id="bold">header</span> 标签的一些主要作用：<br />
+						1. 标识网站或应用程序： <span id="bold">header</span>
+						可以包含网站或应用程序的标志、标题和其他标识元素，帮助用户在页面上快速识别和识别所访问的网站或应用程序。<br />
+						2. 导航栏：常见的做法是将网站的主导航栏放置在 <span id="bold">header</span>
+						中，以提供对网站不同部分的导航链接。这使得导航栏在整个页面中保持一致，并提供易于访问的导航功能。<br />
+						3. 页面级别的标题或描述： <span id="bold">header</span>
+						中的文本内容可以用于呈现页面的主要标题或简短描述，使用户对页面内容有一个快速的了解。<br />
+						4. 页眉内容：除了标志、标题和导航栏之外， <span id="bold">header</span>
+						还可以包含其他与页面整体相关的内容，如联系信息、搜索框、社交媒体链接等。<br />
+						总的来说， <span id="bold">header</span>>
+						标签提供了一个容器，用于将与页面整体相关的内容组织在一起，并帮助用户快速识别和导航到页面的不同部分。它在构建语义化的HTML结构时起到了重要的作用。<br />
+					</p>
+					<h3 id="section">section标签</h3>
+					<p>
+						HTML中的 <span id="bold">section</span>
+						标签用于定义文档中的一个独立的部分或区块。它通常表示文档的逻辑或主题上的分割，可以将相关内容组织在一起。<br />
+						以下是 <span id="bold">section</span> 标签的一些主要作用：<br />
+						1. 逻辑分割： <span id="bold">section</span> 标签用于将文档内容分割成不同的逻辑部分。每个 <span id="bold">section</span>
+						可以包含独立的主题、主要内容或功能模块，使得文档的结构更加清晰和有组织。<br />
+						2. 内容组织： <span id="bold">section</span> 可以用于组织相关的内容，使其在视觉上或语义上形成一个完整的区块。例如，一个新闻网站可以使用
+						section
+						将每篇新闻文章包装在一个独立的区块中。<br />
+						3. 标题和子标题： <span id="bold">section</span>
+						可以包含一个标题或子标题，用于描述该部分的内容或主题。这有助于读者快速了解该部分的主要内容。<br />
+						4. 样式和样式隔离：通过给 <span id="bold">section</span>
+						添加class或ID，可以为每个部分应用特定的样式或脚本。这样可以更好地控制和定制每个部分的外观和行为。<br />
+						5. 语义化的HTML： <span id="bold">section</span>
+						标签的使用有助于构建语义化的HTML结构，提高文档的可访问性和可理解性。它使得文档结构更加清晰，并为搜索引擎和辅助技术提供更准确的信息。<br />
+						总的来说， <span id="bold">section</span>
+						标签用于划分和组织文档内容，提供更好的结构和语义化，使得页面的逻辑更清晰，并且可以更好地控制和样式化各个独立的部分。<br />
+					</p>
+					<h3 id="div">div标签</h3>
+					<p>
+						HTML中的 <span id="bold">div</span> 标签是一个通用的容器元素，用于组合其他HTML元素或内容，并将它们作为一个整体进行样式化或操作。<br />
+						以下是 <span id="bold">div</span> 标签的一些主要作用：<br />
+						1. 分组内容： <span id="bold">div</span>
+						标签可以用于将相关的HTML元素或内容组合在一起，并将它们作为一个逻辑组进行处理。它提供了一种分组元素的方式，使得可以将一组相关的元素包装在一个容器中。<br />
+						2. 样式化和布局： <span id="bold">div</span> 标签是CSS样式化和布局的主要工具之一。通过为 <span id="bold">div</span>
+						添加class或ID，可以为其应用特定的样式规则，控制其外观、位置和布局。<br />
+						3. JavaScript操作： <span id="bold">div</span> 标签可以用作JavaScript操作的目标容器。通过选择和操作 <span
+							id="bold">div</span>
+						元素，可以动态地添加、修改或删除其中的内容，实现与用户交互和动态页面更新相关的功能。<br />
+						4. 语义化的HTML：尽管 <span id="bold">div</span> 本身没有明确的语义，但它在构建语义化的HTML结构时起到了重要的作用。通过将相关的内容包装在 div
+						中，可以提高HTML文档的可读性和可维护性。<br />
+						5. 占位符： <span id="bold">div</span> 标签可以用作占位符，为将来的内容预留空间。在页面开发过程中，可以使用 <span id="bold">div</span>
+						作为临时容器，以便在后续的开发阶段填充实际内容。<br />
+						总的来说， <span
+							id="bold">div</span>标签是一个通用的容器元素，用于组合和包装其他HTML元素或内容。它在样式化、布局、JavaScript操作和语义化的HTML结构方面发挥着重要作用，并提供了一种灵活的方式来组织和处理页面上的内容。<br />
+					</p>
+					<h3 id="nav">nav标签</h3>
+					<p>
+						HTML中的 <span id="bold">nav</span> 标签用于定义页面的导航部分，即网站或应用程序的主要导航菜单。<br />
+						以下是 <span id="bold">nav</span> 标签的一些主要作用：<br />
+						1. 导航菜单： <span id="bold">nav</span>
+						标签用于包含网站或应用程序的主要导航菜单。它可以包含链接或按钮，用于导航到网站的不同页面或应用程序的不同功能区域。<br />
+						2. 语义化的HTML：使用 <span id="bold">nav</span>
+						标签可以提高HTML文档的语义化。它明确地标识出包含导航的部分，使得搜索引擎和辅助技术能够更好地理解和解释导航菜单的作用。<br />
+						3. 可访问性： <span id="bold">nav</span> 标签有助于提高页面的可访问性。屏幕阅读器和辅助技术可以使用 <span id="bold">nav</span>
+						标签来识别导航菜单，并向用户提供更好的导航和定位功能。<br />
+						4. 样式化和布局：通过为 <span id="bold">nav</span>
+						标签添加class或ID，可以为导航菜单应用特定的样式规则，以实现自定义的外观和布局。这使得导航菜单的样式和风格能够与页面的其他部分进行区分。<br />
+						总的来说， <span id="bold">nav</span>
+						标签用于定义页面的导航部分，提供了一种语义化的方式来标识和组织导航菜单。它在页面的可访问性、语义化和样式化方面起到了重要的作用，帮助用户更好地导航和浏览网站或应用程序的内容。<br />
+					</p>
+					<h3 id="ul">ul标签</h3>
+					<p>
+						HTML中的 <span id="bold">ul</span> 标签用于创建无序列表（unordered
+						list）。无序列表是一种用于展示项目列表的标记方式，其中的项目没有特定的顺序或层次关系。<br />
+						以下是 <span id="bold">ul</span> 标签的一些主要作用：<br />
+						1. 创建无序列表： <span id="bold">ul</span> 标签用于创建无序列表，其中的项目会以符号（通常是圆点或实心圆）作为项目符号进行显示。<br />
+						2. 列表项： <span id="bold">ul</span> 标签中的每个列表项使用 <span id="bold">li</span> 标签进行包裹。 <span
+							id="bold">li</span> 标签定义了列表中的每个项目，可以包含文本、图像、链接或其他HTML元素。<br />
+						3. 分组相关内容：无序列表适用于将相关的项目进行分组显示。例如，在一个产品特点列表中，每个特点可以作为一个列表项进行展示。<br />
+						4. 语义化的HTML：使用 <span id="bold">ul</span>
+						标签可以提高HTML文档的语义化。它明确地标识出包含无序列表的部分，使得搜索引擎和辅助技术能够更好地理解和解释列表的结构和含义。<br />
+						5. 样式化和布局：通过为 <span id="bold">ul</span> 和 <span id="bold">li</span>
+						标签添加class或ID，可以为无序列表应用特定的样式规则，以实现自定义的外观和布局。<br />
+						总的来说， <span id="bold">ul</span>
+						标签用于创建无序列表，其中的项目没有特定的顺序或层次关系。它在组织和展示项目列表、语义化的HTML结构以及样式化和布局方面起到了重要的作用。<br />
+					</p>
+				</div>
+			</div>
 			</div>
 		</section>
 
