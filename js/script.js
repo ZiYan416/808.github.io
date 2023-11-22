@@ -241,14 +241,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 		audio.play();
 		playButton.classList.remove('bx-play');
 		playButton.classList.add('bx-pause');
-		image.src = 'Jay.jpg';
+		image.src = 'img/Jay.jpg';
 	}
 	//暂停方法
 	function pauseSong() {
 		audio.pause();
 		playButton.classList.remove('bx-pause');
 		playButton.classList.add('bx-play');
-		image.src = 'Jay2.jpg';
+		image.src = 'img/Jay2.jpg';
 	}
 	//渲染歌曲方法
 	function render(song) {
